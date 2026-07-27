@@ -41,3 +41,10 @@ in that directory.
 - [`express-authorization-before-execution.md`](rules/governance/express-authorization-before-execution.md): execute edits, commits, and outward actions only on an express, work-naming authorization. A conditional or sequenced go authorizes only its first step.
 - [`evidence-grounded-completion.md`](rules/governance/evidence-grounded-completion.md): never claim work is done, fixed, or passing without evidence that supports the claim.
 - [`clarify-before-acting.md`](rules/governance/clarify-before-acting.md): resolve a material ambiguity with the maintainer before acting on an assumption.
+
+## Asking the maintainer questions
+
+When a decision needs the maintainer, follow
+[`rules/maintainer-questions.md`](rules/maintainer-questions.md): one question at a
+time, in prose, with a recommended Option A, viable Options B and C, and a
+free-form Option D, in priority order.
