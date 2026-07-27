@@ -1,8 +1,10 @@
-# AI Language
+# Clean Language
 
-A canonical language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing prose in Jeff Posluns' preferred style.
+Clean Language is a cross-platform language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing precise, direct, natural prose.
 
-The repository uses one cross-platform skill definition for ChatGPT and Claude. The core skill lives in [`jeff-language/`](jeff-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude ignores that file and reads the same `SKILL.md` and references.
+The project uses one canonical skill definition for ChatGPT and Claude. The core skill lives in [`clean-language/`](clean-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude ignores that file and reads the same `SKILL.md` and references.
+
+Project site: [cleanlanguage.ai](https://cleanlanguage.ai)
 
 ## Design goals
 
@@ -20,7 +22,7 @@ ai-language/
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
-└── jeff-language/
+└── clean-language/
     ├── SKILL.md
     ├── agents/
     │   └── openai.yaml
@@ -33,10 +35,10 @@ ai-language/
 
 ## ChatGPT installation
 
-Package the `jeff-language` directory as `skill.zip`, then upload it through the ChatGPT Skills interface.
+Package the `clean-language` directory as `skill.zip`, then upload it through the ChatGPT Skills interface.
 
 ```bash
-python /path/to/skill-creator/scripts/package_skill.py ./jeff-language ./dist
+python /path/to/skill-creator/scripts/package_skill.py ./clean-language ./dist
 ```
 
 The resulting archive must be named `skill.zip` and contain one skill entry point.
@@ -47,18 +49,18 @@ Copy or clone the skill directory into the project or user skill location used b
 
 ```bash
 mkdir -p .claude/skills
-cp -R /path/to/ai-language/jeff-language .claude/skills/jeff-language
+cp -R /path/to/ai-language/clean-language .claude/skills/clean-language
 ```
 
 For a user-level installation, place the directory under the corresponding user Claude skills directory. Keep `SKILL.md` and its relative `references/` paths together.
 
 ## Claude Projects or other LLMs
 
-Upload or include `jeff-language/SKILL.md` and the referenced files as project knowledge or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
+Upload or include `clean-language/SKILL.md` and the referenced files as project knowledge or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
 
 ## Usage examples
 
-- "Rewrite this email using Jeff Language."
+- "Rewrite this email using Clean Language."
 - "Audit this report for generic AI language without changing the technical meaning."
 - "Draft a CIO-level Teams message from these notes."
 - "Proofread this policy clause with minimal intervention."
