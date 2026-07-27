@@ -8,6 +8,7 @@ It removes common AI-writing patterns such as robotic tone, filler, contrast fra
   <a href="https://cleanlanguage.ai/install/#claude"><img alt="Set up in Claude" src="https://img.shields.io/badge/Set_up_in_Claude-C15F3C?style=for-the-badge&logo=anthropic&logoColor=white"></a>
   <a href="https://cleanlanguage.ai/install/#chatgpt"><img alt="Set up in ChatGPT" src="https://img.shields.io/badge/Set_up_in_ChatGPT-111111?style=for-the-badge&logo=openai&logoColor=white"></a>
   <a href="https://cleanlanguage.ai/install/#gemini"><img alt="Set up in Gemini" src="https://img.shields.io/badge/Set_up_in_Gemini-3154D9?style=for-the-badge&logo=googlegemini&logoColor=white"></a>
+  <a href="https://cleanlanguage.ai/install/#copilot"><img alt="Set up in Copilot" src="https://img.shields.io/badge/Set_up_in_Copilot-0A6ED1?style=for-the-badge"></a>
 </p>
 
 <p align="center">
