@@ -5,9 +5,9 @@ Clean Language is a cross-platform language and editorial skill for drafting, re
 It removes common AI-writing patterns such as robotic tone, filler, contrast framing, unnecessary em dashes and en dashes, fake enthusiasm, repeated conclusions, business jargon, and vague claims while preserving factual, technical, legal, policy, contractual, and standards meaning.
 
 <p align="center">
-  <a href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip"><img alt="Install in Claude" src="https://img.shields.io/badge/Install_in_Claude-C15F3C?style=for-the-badge&logo=anthropic&logoColor=white"></a>
-  <a href="https://cleanlanguage.ai/install/#chatgpt"><img alt="Install in ChatGPT" src="https://img.shields.io/badge/Install_in_ChatGPT-111111?style=for-the-badge&logo=openai&logoColor=white"></a>
-  <a href="https://cleanlanguage.ai/install/#gemini"><img alt="Install in Gemini" src="https://img.shields.io/badge/Install_in_Gemini-3154D9?style=for-the-badge&logo=googlegemini&logoColor=white"></a>
+  <a href="https://cleanlanguage.ai/install/#claude"><img alt="Set up in Claude" src="https://img.shields.io/badge/Set_up_in_Claude-C15F3C?style=for-the-badge&logo=anthropic&logoColor=white"></a>
+  <a href="https://cleanlanguage.ai/install/#chatgpt"><img alt="Set up in ChatGPT" src="https://img.shields.io/badge/Set_up_in_ChatGPT-111111?style=for-the-badge&logo=openai&logoColor=white"></a>
+  <a href="https://cleanlanguage.ai/install/#gemini"><img alt="Set up in Gemini" src="https://img.shields.io/badge/Set_up_in_Gemini-3154D9?style=for-the-badge&logo=googlegemini&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@ It removes common AI-writing patterns such as robotic tone, filler, contrast fra
 
 Clean Language uses one canonical skill definition for ChatGPT, Claude, Gemini, and other compatible AI systems. The core skill lives in [`clean-language/`](clean-language/).
 
-- **Claude:** upload the packaged `clean-language.zip` Skill.
+- **Claude:** download the packaged Skill, upload it through Claude's Skills interface, and enable it.
 - **ChatGPT:** create or upload a Skill using the Clean Language instructions.
 - **Gemini:** create a reusable Gem or install the Agent Skill through Gemini CLI.
 - **Other AI systems:** use the portable instructions as custom instructions, project knowledge, or a system prompt.
