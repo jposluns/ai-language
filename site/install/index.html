@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Install Clean Language for ChatGPT, Claude, and Gemini</title>
-  <meta name="description" content="Install the Clean Language writing skill in ChatGPT, Claude Code, Gemini CLI, Claude Projects, or another AI system. Use one open rule set to remove generic AI writing patterns while preserving meaning.">
+  <title>Install Clean Language in ChatGPT, Claude, or Gemini</title>
+  <meta name="description" content="Simple click-by-click instructions for installing Clean Language in ChatGPT, Claude, and Gemini. No command line, coding, or GitHub experience required.">
   <link rel="canonical" href="https://cleanlanguage.ai/install/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Install Clean Language">
-  <meta property="og:description" content="Set up Clean Language in ChatGPT, Claude Code, Gemini CLI, Claude Projects, or another AI tool.">
+  <meta property="og:title" content="Install Clean Language without technical knowledge">
+  <meta property="og:description" content="Click-by-click setup for ChatGPT Skills, Claude Projects, and Gemini Gems.">
   <meta property="og:url" content="https://cleanlanguage.ai/install/">
 </head>
 <body>
@@ -25,89 +25,90 @@
 
   <main>
     <section class="page-hero">
-      <p class="eyebrow">Installation</p>
-      <h1>Use Clean Language with your AI writing tool.</h1>
-      <p>The repository contains one canonical skill for ChatGPT, Claude, Gemini CLI, and other large language models. The same rules handle drafting, rewriting, proofreading, adaptation, and language quality assurance.</p>
+      <p class="eyebrow">Simple installation</p>
+      <h1>Pick the AI you use and follow the buttons.</h1>
+      <p>You do not need a command line, a developer account, or any knowledge of GitHub. The instructions below are for the normal ChatGPT, Claude, and Gemini websites and apps.</p>
     </section>
 
     <article class="content">
-      <div class="notice"><strong>Source repository:</strong> <a href="https://github.com/jposluns/ai-language">github.com/jposluns/ai-language</a></div>
+      <div class="notice"><strong>First step:</strong> <a href="/downloads/clean-language-instructions.txt" download>download the Clean Language instructions file</a>. Your browser will save a small text file named <code>clean-language-instructions.txt</code>.</div>
 
-      <section>
+      <section id="chatgpt">
         <h2>ChatGPT</h2>
+        <p><strong>Use this method when your ChatGPT account shows Plugins and Skills.</strong> Personal Skills are generally available on Business, Enterprise, Healthcare, and Edu accounts. Your workspace administrator may need to enable them.</p>
         <ol>
-          <li>Download or clone the repository.</li>
-          <li>Package the <code>clean-language</code> directory as a skill archive.</li>
-          <li>Upload the resulting <code>skill.zip</code> through the ChatGPT Skills interface.</li>
-          <li>Invoke the skill by asking ChatGPT to apply Clean Language to a draft, message, report, policy, or technical document.</li>
+          <li>Open ChatGPT.</li>
+          <li>Look at the menu on the left and click <strong>Plugins</strong>.</li>
+          <li>At the top of the Plugin Directory, click <strong>Skills</strong>.</li>
+          <li>Click <strong>Create</strong>.</li>
+          <li>Click <strong>Create with chat</strong>.</li>
+          <li>Type: <code>Create a skill named Clean Language using the instructions in the file I am about to upload.</code></li>
+          <li>Attach the downloaded <code>clean-language-instructions.txt</code> file.</li>
+          <li>Send the message.</li>
+          <li>When ChatGPT shows the completed skill, click <strong>Install</strong>.</li>
         </ol>
-        <pre><code>python /path/to/skill-creator/scripts/package_skill.py \
-  ./clean-language ./dist</code></pre>
-        <p>The archive should contain one <code>SKILL.md</code> entry point and retain the relative <code>references/</code> directory.</p>
+        <p>Test it by starting a new chat and typing: <code>Apply Clean Language to this message: [paste your text]</code></p>
+        <div class="notice"><strong>Do you not see Plugins or Skills?</strong> Your account may not support personal Skills yet, or your organization may have disabled them. Use the instructions file in a normal chat and say: <code>Follow these writing rules for this conversation.</code></div>
+      </section>
+
+      <section id="claude">
+        <h2>Claude website or Claude Desktop</h2>
+        <p>The easiest non-technical method is a Claude Project. Projects are available on paid Claude plans and keep the instructions available for every chat inside that project.</p>
+        <ol>
+          <li>Open Claude.</li>
+          <li>Move your pointer to the left side of the screen and click <strong>Projects</strong>.</li>
+          <li>Click <strong>New Project</strong>.</li>
+          <li>Name the project <strong>Clean Language</strong>.</li>
+          <li>Open the new project.</li>
+          <li>On the right side, find <strong>Project knowledge</strong>.</li>
+          <li>Click the <strong>+</strong> button.</li>
+          <li>Choose the downloaded <code>clean-language-instructions.txt</code> file.</li>
+          <li>Click <strong>Set project instructions</strong>.</li>
+          <li>Paste this sentence: <code>Use the Clean Language instructions in project knowledge for every response unless I explicitly tell you not to.</code></li>
+          <li>Click <strong>Save instructions</strong>.</li>
+        </ol>
+        <p>Start all writing chats inside the Clean Language project. Claude will use the file automatically within that project.</p>
+      </section>
+
+      <section id="gemini">
+        <h2>Gemini website or Gemini app</h2>
+        <p>The easiest method is a custom Gem. Create it once on the Gemini website, then use it from the Gemini website, mobile app, or supported Google Workspace side panel.</p>
+        <ol>
+          <li>On a computer, open <strong>gemini.google.com</strong>.</li>
+          <li>Open the menu on the left.</li>
+          <li>Click <strong>Gems</strong>. If you do not see it, click <strong>Settings and help</strong>, then <strong>Gems</strong>.</li>
+          <li>Click <strong>New Gem</strong>.</li>
+          <li>Name it <strong>Clean Language</strong>.</li>
+          <li>In the instructions box, type: <code>Follow the Clean Language instructions in the attached knowledge file for every response.</code></li>
+          <li>Scroll to <strong>Knowledge</strong>.</li>
+          <li>Click <strong>Add files</strong>.</li>
+          <li>Click <strong>Upload files</strong>.</li>
+          <li>Select <code>clean-language-instructions.txt</code>.</li>
+          <li>Click <strong>Save</strong>.</li>
+        </ol>
+        <p>To use it later, open Gemini, click <strong>Gems</strong>, then click <strong>Clean Language</strong>.</p>
+        <div class="notice"><strong>Mobile note:</strong> Custom Gems are created and edited on the Gemini website. After saving, the Gem appears in the Gemini mobile app.</div>
       </section>
 
       <section>
-        <h2>Claude Code</h2>
-        <p>Copy the skill directory into the project level Claude skills directory:</p>
-        <pre><code>mkdir -p .claude/skills
-cp -R /path/to/ai-language/clean-language \
-  .claude/skills/clean-language</code></pre>
-        <p>Use the corresponding user level skills directory when you want Clean Language available across projects.</p>
+        <h2>How to use Clean Language</h2>
+        <p>You can paste rough notes or finished text. Use one of these simple requests:</p>
+        <pre><code>Rewrite this using Clean Language:
+[paste text]</code></pre>
+        <pre><code>Proofread this using Clean Language.
+Fix mistakes but do not change my tone:
+[paste text]</code></pre>
+        <pre><code>Audit this for robotic AI language,
+filler, contrast framing, and dash overuse.
+Do not rewrite it:
+[paste text]</code></pre>
+        <pre><code>Write this with no em dashes or en dashes:
+[paste notes]</code></pre>
       </section>
 
       <section>
-        <h2>Gemini CLI</h2>
-        <p>Gemini CLI supports the same Agent Skills format and can install Clean Language directly from the GitHub repository:</p>
-        <pre><code>gemini skills install https://github.com/jposluns/ai-language.git \
-  --path clean-language</code></pre>
-        <p>The default scope installs the skill for the current user. Add <code>--scope workspace</code> when you want the skill limited to one project.</p>
-        <p>Verify discovery from the terminal:</p>
-        <pre><code>gemini skills list</code></pre>
-        <p>Inside Gemini CLI, use <code>/skills list</code> to inspect discovered skills and <code>/skills reload</code> after updating the files. Gemini loads the full Clean Language instructions only when a request matches the skill description and you approve activation.</p>
-        <p>You may also copy the skill manually to <code>~/.gemini/skills/clean-language</code> for user scope or <code>.gemini/skills/clean-language</code> for workspace scope.</p>
-      </section>
-
-      <section>
-        <h2>Claude Projects</h2>
-        <p>Upload <code>clean-language/SKILL.md</code> and the files under <code>clean-language/references/</code> to the project knowledge. Keep the precedence rules intact. They prevent stylistic cleanup from changing technical, legal, policy, contractual, or factual meaning.</p>
-      </section>
-
-      <section>
-        <h2>Other AI tools and API calls</h2>
-        <p>Use the contents of <code>SKILL.md</code> as a system instruction. Provide the reference files when the model needs detailed examples, context rules, anti patterns, or the final quality checklist.</p>
-        <p>Clean Language works with ChatGPT, Claude, Gemini, Microsoft Copilot, local models, and other systems that accept reusable instructions or project knowledge.</p>
-      </section>
-
-      <section>
-        <h2>Prompt examples</h2>
-        <h3>Rewrite a draft</h3>
-        <pre><code>Apply Clean Language to this draft.
-Preserve every fact, date, figure, qualification,
-and technical term. Remove generic AI tone,
-filler, contrast framing, and unnecessary dashes.</code></pre>
-        <h3>Audit without rewriting</h3>
-        <pre><code>Audit this document using Clean Language.
-Identify robotic phrasing, filler, vague claims,
-repetition, hidden ownership, and dash overuse.
-Do not rewrite the text.</code></pre>
-        <h3>Prohibit em dashes and en dashes</h3>
-        <pre><code>Apply Clean Language and use no em dashes or en dashes.
-Use commas, colons, parentheses, or separate sentences.</code></pre>
-        <h3>Technical and policy writing</h3>
-        <pre><code>Apply Clean Language with minimal intervention.
-Preserve commands, identifiers, normative terms,
-control language, and all statements of uncertainty.</code></pre>
-      </section>
-
-      <section>
-        <h2>Recommended operating modes</h2>
-        <ul>
-          <li><strong>Draft:</strong> create finished prose from notes or an objective.</li>
-          <li><strong>Rewrite:</strong> replace supplied prose while preserving meaning.</li>
-          <li><strong>Proofread:</strong> correct mechanics with minimal stylistic change.</li>
-          <li><strong>Audit:</strong> identify defects without rewriting.</li>
-          <li><strong>Adapt:</strong> change audience, channel, tone, length, or format.</li>
-        </ul>
+        <h2>For technical users</h2>
+        <p>Developers can install the full Agent Skill from the <a href="https://github.com/jposluns/ai-language">GitHub repository</a> for ChatGPT, Claude Code, or Gemini CLI. Ordinary users do not need this method.</p>
       </section>
     </article>
   </main>
