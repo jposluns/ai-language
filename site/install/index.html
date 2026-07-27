@@ -104,26 +104,45 @@
 
       <section id="chatgpt">
         <h2>ChatGPT</h2>
-        <p>Use this method when your ChatGPT account shows <strong>Plugins</strong> and <strong>Skills</strong>. Your workspace administrator may need to enable personal Skills.</p>
+        <p class="verified">Last verified 27 July 2026.</p>
+        <p>ChatGPT reads the same packaged Skill as Claude. Upload it once, and ChatGPT applies Clean Language when your request matches.</p>
+
+        <h3>Step 1: download the Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="/download">Download clean-language.zip</a>
+          <a class="button secondary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256" target="_blank" rel="noopener noreferrer">Verify the SHA-256 checksum</a>
+        </div>
+        <p>Your browser saves a file named <code>clean-language.zip</code>. Do not unzip it. The Skill is prose instructions and reference material only. It contains no executable code and makes no network calls.</p>
+
+        <h3>Step 2: upload it to ChatGPT</h3>
         <ol>
-          <li>
-            <div class="step-actions">
-              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
-              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
-            </div>
-            The file saves as <code>clean-language-instructions.txt</code>.
-          </li>
-          <li>Open ChatGPT.</li>
-          <li>In the left menu, click <strong>Plugins</strong>.</li>
-          <li>At the top of the Plugin Directory, click <strong>Skills</strong>.</li>
-          <li>Click <strong>Create</strong>.</li>
-          <li>Click <strong>Create with chat</strong>.</li>
-          <li>Type: <code>Create a skill named Clean Language using the instructions in the file I am about to upload.</code></li>
-          <li>Attach <code>clean-language-instructions.txt</code> and send the message.</li>
-          <li>When ChatGPT shows the completed Skill, click <strong>Install</strong>.</li>
+          <li>Open <strong>Plugins</strong> in the ChatGPT sidebar, then open <strong>Skills</strong>.</li>
+          <li>Click <strong>Create</strong>, then <strong>Upload from your computer</strong>.</li>
+          <li>Select the downloaded <code>clean-language.zip</code> file.</li>
+          <li>Review the skill, then install it.</li>
         </ol>
-        <p>Test it by starting a new chat and typing: <code>Apply Clean Language to this message: [paste your text]</code></p>
-        <div class="notice"><strong>Do you not see Plugins or Skills?</strong> Attach the instructions file to a normal chat and say: <code>Follow these writing rules for this conversation.</code></div>
+        <p>Test it in a new chat: <code>Apply Clean Language to this message: [paste your text]</code></p>
+        <div class="notice"><strong>Workspace accounts:</strong> your administrator may need to allow members to use and upload Skills.</div>
+
+        <details>
+          <summary><strong>Fallback: build the skill from the instructions file</strong></summary>
+          <p>Use this if your account cannot upload a skill.</p>
+          <ol>
+            <li>
+              <div class="step-actions">
+                <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
+                <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
+              </div>
+              The file saves as <code>clean-language-instructions.txt</code>.
+            </li>
+            <li>Open ChatGPT, open <strong>Plugins</strong>, then <strong>Skills</strong>.</li>
+            <li>Click <strong>Create</strong>, then <strong>Create with chat</strong>.</li>
+            <li>Type: <code>Create a skill named Clean Language using the instructions in the file I am about to upload.</code></li>
+            <li>Attach <code>clean-language-instructions.txt</code> and send the message.</li>
+            <li>When ChatGPT shows the completed skill, install it.</li>
+          </ol>
+          <p>If you do not see Skills, attach the instructions file to a normal chat and say: <code>Follow these writing rules for this conversation.</code></p>
+        </details>
       </section>
 
       <section id="gemini">
