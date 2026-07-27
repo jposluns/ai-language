@@ -43,28 +43,38 @@ Use the Clean Language instructions in project knowledge for every response unle
 
 ## ChatGPT
 
-Use this method when your ChatGPT account shows **Plugins** and **Skills**.
+ChatGPT can use the same packaged Skill as Claude. Upload it once, and ChatGPT applies Clean Language when your request matches.
 
-1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt). It saves as `clean-language-instructions.txt`.
+1. Download [`clean-language.zip`](https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip). Do not unzip it.
 2. Open ChatGPT.
-3. In the left menu, click **Plugins**.
-4. At the top of the Plugin Directory, click **Skills**.
-5. Click **Create**.
-6. Click **Create with chat**.
-7. Enter:
-
-```text
-Create a skill named Clean Language using the instructions in the file I am about to upload.
-```
-
-8. Attach `clean-language-instructions.txt` and send the message.
-9. When ChatGPT shows the completed Skill, click **Install**.
+3. In the left menu, click **Plugins**, then open **Skills**.
+4. Click **Create**, then **Upload from your computer**.
+5. Select `clean-language.zip`.
+6. Review the Skill, then install it.
 
 Test it in a new chat:
 
 ```text
 Apply Clean Language to this message: [paste your text]
 ```
+
+Workspace administrators may need to allow members to use and upload Skills.
+
+### ChatGPT fallback: build the skill from the instructions file
+
+Use this when your account cannot upload a skill.
+
+1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt). It saves as `clean-language-instructions.txt`.
+2. Open ChatGPT, click **Plugins**, then open **Skills**.
+3. Click **Create**, then **Create with chat**.
+4. Enter:
+
+```text
+Create a skill named Clean Language using the instructions in the file I am about to upload.
+```
+
+5. Attach `clean-language-instructions.txt` and send the message.
+6. When ChatGPT shows the completed Skill, click **Install**.
 
 When Plugins or Skills are unavailable, attach the instructions file to a normal chat and enter:
 

@@ -2,7 +2,7 @@
 
 ## Scope
 
-Except where otherwise noted, all material in this repository, including the Clean Language skill and the cleanlanguage.ai website content, markup, and styles, is licensed under CC BY-SA 4.0. Third-party material retains its original licence as listed below.
+Except where otherwise noted, all material in this repository, including the Clean Language skill and the cleanlanguage.ai website content, markup, and styles, is licensed under CC BY-SA 4.0. Adopted material and related work are noted below, and any third-party material retains its original licence.
 
 ## Clean Language
 
@@ -15,17 +15,17 @@ Suggested attribution:
 
 > Clean Language by Jeff Posluns, https://cleanlanguage.ai, licensed under CC BY-SA 4.0. Changes were made.
 
-## Upstream material
+## Related work
 
-This project incorporates and adapts editorial concepts from Hardik Pandya's `stop-slop` project:
+Hardik Pandya's `stop-slop` is an independent project with a similar purpose: reducing generic, low-quality AI writing.
 
 - Repository: `hardikpandya/stop-slop`
 - Author: Hardik Pandya
-- Upstream licence: MIT License
+- Licence: MIT License
 
-The upstream MIT-licensed material remains subject to its original licence and attribution requirements. The adapted Clean Language expression, organization, additions, and project-specific material are licensed under CC BY-SA 4.0 where Jeff Posluns holds the relevant rights.
+Clean Language was created independently and includes no text from `stop-slop`. The two projects share a goal rather than source material. Clean Language uses context-sensitive rules and semantic-preservation safeguards in place of absolute grammatical prohibitions.
 
-The adaptation retains useful anti-pattern detection while replacing absolute grammatical prohibitions with context-sensitive rules and semantic-preservation safeguards.
+If you know of another project working toward the same goal, please tell both the Clean Language maintainer and that project's maintainers, so the efforts can align and support each other.
 
 ## Adopted governance rules
 
