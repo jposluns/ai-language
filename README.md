@@ -57,7 +57,7 @@ The package contains prose instructions, metadata, and reference material. It co
 
 ## Licence
 
-Except where otherwise noted, the original Clean Language material is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+Except where otherwise noted, all material in this repository, including the Clean Language skill and the cleanlanguage.ai website content, markup, and styles, is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (SPDX: `CC-BY-SA-4.0`).
 
 Suggested attribution:
 

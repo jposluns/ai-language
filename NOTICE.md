@@ -1,8 +1,12 @@
 # Notice
 
+## Scope
+
+Except where otherwise noted, all material in this repository, including the Clean Language skill and the cleanlanguage.ai website content, markup, and styles, is licensed under CC BY-SA 4.0. Third-party material retains its original licence as listed below.
+
 ## Clean Language
 
-Except where otherwise noted, the original Clean Language material in this repository is copyright 2026 Jeff Posluns and licensed under the Creative Commons Attribution-ShareAlike 4.0 International Public License.
+The original Clean Language material in this repository is copyright 2026 Jeff Posluns and licensed under the Creative Commons Attribution-ShareAlike 4.0 International Public License (SPDX: `CC-BY-SA-4.0`).
 
 Canonical licence:
 https://creativecommons.org/licenses/by-sa/4.0/
