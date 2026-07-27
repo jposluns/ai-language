@@ -48,6 +48,8 @@ See [INSTALL.md](INSTALL.md) for complete setup instructions.
 
 ## Distribution and assurance
 
+Latest release: [![Latest release](https://img.shields.io/github/v/release/jposluns/ai-language?label=release)](https://github.com/jposluns/ai-language/releases/latest). The full changelog is on the [releases page](https://github.com/jposluns/ai-language/releases).
+
 Tagged releases provide:
 
 - `clean-language.zip`, containing the upload-ready Skill;
