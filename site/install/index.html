@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Install Clean Language for ChatGPT and Claude</title>
-  <meta name="description" content="Install the Clean Language writing skill in ChatGPT, Claude Code, Claude Projects, or another AI system. Use one open source rule set to remove generic AI writing patterns while preserving meaning.">
+  <title>Install Clean Language for ChatGPT, Claude, and Gemini</title>
+  <meta name="description" content="Install the Clean Language writing skill in ChatGPT, Claude Code, Gemini CLI, Claude Projects, or another AI system. Use one open rule set to remove generic AI writing patterns while preserving meaning.">
   <link rel="canonical" href="https://cleanlanguage.ai/install/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Install Clean Language">
-  <meta property="og:description" content="Set up Clean Language in ChatGPT, Claude Code, Claude Projects, or another AI tool.">
+  <meta property="og:description" content="Set up Clean Language in ChatGPT, Claude Code, Gemini CLI, Claude Projects, or another AI tool.">
   <meta property="og:url" content="https://cleanlanguage.ai/install/">
 </head>
 <body>
@@ -27,7 +27,7 @@
     <section class="page-hero">
       <p class="eyebrow">Installation</p>
       <h1>Use Clean Language with your AI writing tool.</h1>
-      <p>The repository contains one canonical skill for ChatGPT, Claude, and other large language models. The same rules handle drafting, rewriting, proofreading, adaptation, and language quality assurance.</p>
+      <p>The repository contains one canonical skill for ChatGPT, Claude, Gemini CLI, and other large language models. The same rules handle drafting, rewriting, proofreading, adaptation, and language quality assurance.</p>
     </section>
 
     <article class="content">
@@ -53,6 +53,18 @@
 cp -R /path/to/ai-language/clean-language \
   .claude/skills/clean-language</code></pre>
         <p>Use the corresponding user level skills directory when you want Clean Language available across projects.</p>
+      </section>
+
+      <section>
+        <h2>Gemini CLI</h2>
+        <p>Gemini CLI supports the same Agent Skills format and can install Clean Language directly from the GitHub repository:</p>
+        <pre><code>gemini skills install https://github.com/jposluns/ai-language.git \
+  --path clean-language</code></pre>
+        <p>The default scope installs the skill for the current user. Add <code>--scope workspace</code> when you want the skill limited to one project.</p>
+        <p>Verify discovery from the terminal:</p>
+        <pre><code>gemini skills list</code></pre>
+        <p>Inside Gemini CLI, use <code>/skills list</code> to inspect discovered skills and <code>/skills reload</code> after updating the files. Gemini loads the full Clean Language instructions only when a request matches the skill description and you approve activation.</p>
+        <p>You may also copy the skill manually to <code>~/.gemini/skills/clean-language</code> for user scope or <code>.gemini/skills/clean-language</code> for workspace scope.</p>
       </section>
 
       <section>
