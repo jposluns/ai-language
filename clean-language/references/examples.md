@@ -1,34 +1,34 @@
 # Examples
 
-These examples demonstrate degree of intervention rather than fixed templates.
+These examples demonstrate degree of intervention rather than fixed templates. Every revised version uses only facts present in its source. Where a stronger version needs a specific figure or actor, the source supplies it. Never invent one to replace a vague statement.
 
 ## Lead with the conclusion
 
 ### Weak
 
-It is worth noting that there are several areas where the current implementation could potentially create challenges moving forward.
+It is worth noting that there are several areas where the current implementation could create challenges: unclear ownership, no rollback procedure, and an untested recovery path.
 
 ### Preferred
 
-The current implementation creates three operational risks: unclear ownership, no rollback procedure, and an untested recovery path.
+The current implementation has three unresolved points: unclear ownership, no rollback procedure, and an untested recovery path.
 
 ## Remove artificial balance
 
 ### Weak
 
-The team has made meaningful progress, but there are still some opportunities to improve the process.
+The team has made meaningful progress, but the process still lacks an accountable owner, an approval gate, and tested recovery.
 
 ### Preferred
 
-The process lacks an accountable owner, an approval gate, and evidence that recovery has been tested.
+The process lacks an accountable owner, an approval gate, and tested recovery.
 
 Add progress or mitigating evidence only when it changes the assessment.
 
 ## Preserve technical agency
 
-### Overcorrected
+### Source
 
-The network team configured the firewall to block the connection.
+After the change review, the infrastructure team configured the firewall to block inbound connections from untrusted networks.
 
 ### Preferred when the configuration is the relevant fact
 
@@ -36,7 +36,7 @@ The firewall blocks inbound connections from untrusted networks.
 
 ### Preferred when accountability is the relevant fact
 
-Infrastructure configured the firewall rule without completing the required change review.
+The infrastructure team configured that firewall rule.
 
 ## Preserve useful adverbs
 
@@ -44,9 +44,11 @@ Infrastructure configured the firewall rule without completing the required chan
 
 The system is extremely unreliable.
 
-### Preferred
+### Preferred, when data supports it
 
 The service dropped 14 percent of requests during the test window.
+
+Use the specific figure only when the source or a measurement provides it. Do not invent a number to replace a vague modifier; if none is available, keep the statement qualitative and flag the missing measurement.
 
 ### Legitimate modifier
 
@@ -56,21 +58,21 @@ The encryption keys are cryptographically isolated from the application workload
 
 ### Weak
 
-I wanted to reach out to see if we could perhaps align on the next steps for the warehouse project.
+I wanted to reach out to see if we could align on the warehouse project: the owner, the critical path, the unresolved dependencies, and the recovery plan, before Thursday at 3 p.m.
 
 ### Preferred
 
-Please confirm the project owner, current critical path, unresolved dependencies, and recovery plan by 3:00 p.m. Thursday.
+Please confirm the warehouse project's owner, critical path, unresolved dependencies, and recovery plan by 3:00 p.m. Thursday.
 
 ## Incident status
 
 ### Weak
 
-The situation appears to be under control, and the team is continuing to work diligently to ensure that everything is fully resolved.
+The situation appears to be under control, and the team is continuing to work diligently: the affected server is isolated, file transfers resumed at 06:40, the root cause is not yet confirmed, and the legacy environment still requires rebuild approval.
 
 ### Preferred
 
-The affected server remains isolated. File transfers resumed at 06:40, but the root cause is not confirmed and the legacy environment still requires rebuild approval.
+The affected server is isolated. File transfers resumed at 06:40. The root cause is not confirmed, and the legacy environment still requires rebuild approval.
 
 ## Proofreading with minimal intervention
 

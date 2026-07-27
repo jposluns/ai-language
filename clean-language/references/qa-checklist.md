@@ -5,6 +5,7 @@ Review finished prose against these questions.
 ## Accuracy
 
 - Did the rewrite preserve every material fact, name, date, figure, qualification, and commitment?
+- Did the revision introduce any owner, figure, date, risk, cause, or action that the source does not contain? If so, remove it or flag it as missing.
 - Did any stylistic change alter technical, legal, contractual, policy, or standards meaning?
 - Are assumptions and uncertainty labelled accurately?
 
@@ -17,7 +18,7 @@ Review finished prose against these questions.
 ## Ownership and consequence
 
 - Does the text identify who owns the action or decision when relevant?
-- Does it name the actual impact, risk, cost, dependency, or failure mode?
+- Does it name the actual impact, risk, cost, dependency, or failure mode that the source supports, and flag any the source leaves unstated rather than inventing one?
 - Does it avoid vague statements of importance?
 
 ## Natural language
