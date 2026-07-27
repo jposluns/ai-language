@@ -7,7 +7,7 @@
   <meta name="description" content="Simple click-by-click instructions for installing Clean Language in ChatGPT, Claude, Gemini, and other AI tools. No command line, coding, or GitHub experience required.">
   <link rel="canonical" href="https://cleanlanguage.ai/install/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/styles.css?v=20260727-2">
+  <link rel="stylesheet" href="/styles.css?v=20260727-3">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Install Clean Language without technical knowledge">
   <meta property="og:description" content="Click-by-click setup for ChatGPT Skills, Claude Skills, Gemini Gems, and other AI systems.">
@@ -41,26 +41,46 @@
 
       <section id="claude">
         <h2>Claude website or Claude Desktop</h2>
-        <p><strong>This is the preferred Claude method.</strong> It installs the complete Skill so Claude can use the canonical instructions and reference files across conversations. The website cannot install a Skill directly into your Claude account.</p>
+        <p><strong>This is the recommended Claude method.</strong> It installs the complete Skill, so Claude uses the canonical instructions and reference files in every chat rather than a single project.</p>
+
+        <div class="notice">
+          <p><strong>First, turn on code execution. The Skills section does not appear without it.</strong></p>
+          <p>On Free, Pro, and Max, open <a href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener noreferrer">Settings, then Capabilities</a> and enable <strong>Code execution and file creation</strong>. If the Skills section is missing later, this setting is the reason.</p>
+          <p>Install from a <strong>desktop browser</strong>. The mobile apps are not documented to support skill upload.</p>
+        </div>
+
+        <h3>Step 1: download the Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip">Download clean-language.zip</a>
+          <a class="button secondary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256" target="_blank" rel="noopener noreferrer">Verify the SHA-256 checksum</a>
+        </div>
+        <p>Your browser saves a file named <code>clean-language.zip</code>. Do not unzip it. The Skill is prose instructions and reference material only. It contains no executable code and makes no network calls.</p>
+
+        <h3>Step 2: upload it to Claude</h3>
+        <div class="step-actions">
+          <a class="button primary" href="https://claude.ai/customize/skills" target="_blank" rel="noopener noreferrer">Open Claude Skills</a>
+        </div>
+        <p>On the Skills page:</p>
         <ol>
-          <li>Click <a href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip"><strong>Download Clean Language for Claude</strong></a>.</li>
-          <li>Your browser will save a file named <code>clean-language.zip</code>. Do not unzip it.</li>
-          <li>Open <strong>Claude</strong> in a desktop browser and sign in.</li>
-          <li>Open <strong>Settings</strong>, then <strong>Capabilities</strong>.</li>
-          <li>Turn on <strong>Code execution and file creation</strong> if Claude shows that option and it is currently off.</li>
-          <li>Open <strong>Customize</strong>, then <strong>Skills</strong>.</li>
-          <li>Click the <strong>+</strong> button.</li>
-          <li>Click <strong>Create skill</strong>, then <strong>Upload a skill</strong>.</li>
+          <li>Click the <strong>+</strong> button, then <strong>+ Create skill</strong>.</li>
+          <li>Click <strong>Upload a skill</strong>.</li>
           <li>Select the downloaded <code>clean-language.zip</code> file.</li>
-          <li>Turn <strong>Clean Language</strong> on.</li>
+          <li>Make sure <strong>Clean Language</strong> is switched on in your Skills list.</li>
         </ol>
-        <p>Test it in a new chat by typing: <code>Apply Clean Language to this draft: [paste your text]</code></p>
-        <div class="notice"><strong>Team or Enterprise:</strong> your organization owner may need to enable Skills and code execution. An owner can upload the Skill once for the organization instead of requiring each person to install it.</div>
-        <p>The release also includes a <a href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256">SHA-256 checksum</a>. The Skill contains prose instructions, metadata, and reference material. It contains no executable scripts, software dependencies, or external network instructions.</p>
+
+        <p>Test it in a new chat. Copy this prompt, paste it, then add your text:</p>
+        <div class="step-actions">
+          <code id="claude-test-prompt">Apply Clean Language to this draft:</code>
+          <button type="button" class="button secondary" data-copy-target="claude-test-prompt">Copy prompt</button>
+        </div>
+
+        <div class="notice"><strong>Team or Enterprise:</strong> an organization owner must enable both <strong>Code execution and file creation</strong> and <strong>Skills</strong> in <a href="https://claude.ai/admin-settings/skills" target="_blank" rel="noopener noreferrer">Organization settings, then Skills</a>. An owner can upload Clean Language once to provision it for the whole organization, after which it appears for every member automatically and members do not upload it individually.</div>
+
         <details>
           <summary><strong>Fallback: use a Claude Project instead</strong></summary>
+          <p>Use this only if your organization has disabled Skills or code execution. It applies to one project rather than every chat.</p>
           <ol>
-            <li>Open <a href="https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt">the Clean Language instructions on GitHub</a> and save the file.</li>
+            <li>Open <a href="https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">the Clean Language instructions on GitHub</a> and save the file.</li>
             <li>In Claude, click <strong>Projects</strong>, then <strong>New Project</strong>.</li>
             <li>Name it <strong>Clean Language</strong>.</li>
             <li>Under <strong>Project knowledge</strong>, click <strong>+</strong> and upload the saved file.</li>
@@ -145,5 +165,18 @@ Do not rewrite it:
     <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns">Jeff Posluns</a>.</p>
     <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="https://github.com/jposluns/ai-language">GitHub</a></div>
   </footer>
+  <script>
+    document.querySelectorAll('[data-copy-target]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var source = document.getElementById(button.getAttribute('data-copy-target'));
+        if (!source || !navigator.clipboard) return;
+        navigator.clipboard.writeText(source.textContent).then(function () {
+          var original = button.textContent;
+          button.textContent = 'Copied';
+          setTimeout(function () { button.textContent = original; }, 2000);
+        });
+      });
+    });
+  </script>
 </body>
 </html>

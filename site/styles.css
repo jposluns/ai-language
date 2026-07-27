@@ -80,7 +80,10 @@ p { margin: 0 0 18px; }
   padding: 0 20px;
   border-radius: 12px;
   text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
   font-weight: 800;
+  cursor: pointer;
 }
 .button.primary { background: var(--accent); color: #fff; }
 .button.primary:hover { background: var(--accent-dark); }
@@ -197,6 +200,10 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
 .content ul, .content ol { padding-left: 22px; }
 .content pre { background: var(--code); color: #e8eee9; border-radius: 14px; padding: 22px; overflow-x: auto; }
 .notice { padding: 20px 22px; border-radius: 14px; background: var(--accent-soft); border: 1px solid #b9d0c1; }
+.notice p { margin: 0 0 10px; }
+.notice p:last-child { margin-bottom: 0; }
+.step-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 18px; }
+.step-actions code { color: var(--text); }
 .pattern-list { display: grid; gap: 14px; }
 .pattern-item { padding: 22px; border: 1px solid var(--line); background: var(--surface); border-radius: 14px; }
 .pattern-item strong { display: block; margin-bottom: 8px; }
