@@ -107,11 +107,11 @@ p { margin: 0 0 18px; }
   margin: 38px auto 0;
   max-width: 980px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 14px;
 }
 .platform-button {
-  grid-column: span 2;
+  grid-column: span 3;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -125,7 +125,7 @@ p { margin: 0 0 18px; }
   text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
-.platform-button:nth-child(4), .platform-button:nth-child(5) { grid-column: span 3; }
+.platform-button.guide, .platform-button.source { grid-column: span 6; }
 .platform-button:hover {
   transform: translateY(-3px);
   border-color: #aab4ac;
@@ -149,6 +149,7 @@ p { margin: 0 0 18px; }
 .platform-button.claude .platform-icon { background: #c15f3c; }
 .platform-button.chatgpt .platform-icon { background: #111; }
 .platform-button.gemini .platform-icon { background: linear-gradient(135deg, #3154d9, #9b56d9); }
+.platform-button.copilot .platform-icon { background: linear-gradient(135deg, #0a6ed1, #2ec6c2); }
 .platform-button.guide .platform-icon { background: var(--accent); }
 .platform-button.source .platform-icon { background: #333a35; font-size: 0.72rem; }
 .proof-strip {
@@ -237,8 +238,7 @@ footer p { margin: 0; color: var(--muted); }
 footer div { display: flex; flex-wrap: wrap; gap: 18px; }
 @media (max-width: 900px) {
   .platform-actions { grid-template-columns: 1fr 1fr; }
-  .platform-button, .platform-button:nth-child(4), .platform-button:nth-child(5) { grid-column: span 1; }
-  .platform-button:last-child { grid-column: 1 / -1; }
+  .platform-button, .platform-button.guide, .platform-button.source { grid-column: span 1; }
   .proof-strip { grid-template-columns: 1fr 1fr; }
   .proof-strip div:nth-child(2) { border-right: 0; }
   .proof-strip div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -251,7 +251,7 @@ footer div { display: flex; flex-wrap: wrap; gap: 18px; }
   nav a.nav-collapse { display: none; }
   .hero { margin-top: 48px; }
   .platform-actions { grid-template-columns: 1fr; }
-  .platform-button, .platform-button:nth-child(4), .platform-button:nth-child(5), .platform-button:last-child { grid-column: span 1; }
+  .platform-button, .platform-button.guide, .platform-button.source { grid-column: span 1; }
   .proof-strip, .card-grid { grid-template-columns: 1fr; }
   .proof-strip div { border-right: 0; border-bottom: 1px solid var(--line); }
   .proof-strip div:last-child { border-bottom: 0; }
