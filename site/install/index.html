@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install Clean Language for ChatGPT and Claude</title>
+  <meta name="description" content="Install the Clean Language writing skill in ChatGPT, Claude Code, Claude Projects, or another AI system. Use one open source rule set to remove generic AI writing patterns while preserving meaning.">
+  <link rel="canonical" href="https://cleanlanguage.ai/install/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Install Clean Language">
+  <meta property="og:description" content="Set up Clean Language in ChatGPT, Claude Code, Claude Projects, or another AI tool.">
+  <meta property="og:url" content="https://cleanlanguage.ai/install/">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/patterns/">AI patterns</a>
+      <a href="https://github.com/jposluns/ai-language">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Installation</p>
+      <h1>Use Clean Language with your AI writing tool.</h1>
+      <p>The repository contains one canonical skill for ChatGPT, Claude, and other large language models. The same rules handle drafting, rewriting, proofreading, adaptation, and language quality assurance.</p>
+    </section>
+
+    <article class="content">
+      <div class="notice"><strong>Source repository:</strong> <a href="https://github.com/jposluns/ai-language">github.com/jposluns/ai-language</a></div>
+
+      <section>
+        <h2>ChatGPT</h2>
+        <ol>
+          <li>Download or clone the repository.</li>
+          <li>Package the <code>clean-language</code> directory as a skill archive.</li>
+          <li>Upload the resulting <code>skill.zip</code> through the ChatGPT Skills interface.</li>
+          <li>Invoke the skill by asking ChatGPT to apply Clean Language to a draft, message, report, policy, or technical document.</li>
+        </ol>
+        <pre><code>python /path/to/skill-creator/scripts/package_skill.py \
+  ./clean-language ./dist</code></pre>
+        <p>The archive should contain one <code>SKILL.md</code> entry point and retain the relative <code>references/</code> directory.</p>
+      </section>
+
+      <section>
+        <h2>Claude Code</h2>
+        <p>Copy the skill directory into the project level Claude skills directory:</p>
+        <pre><code>mkdir -p .claude/skills
+cp -R /path/to/ai-language/clean-language \
+  .claude/skills/clean-language</code></pre>
+        <p>Use the corresponding user level skills directory when you want Clean Language available across projects.</p>
+      </section>
+
+      <section>
+        <h2>Claude Projects</h2>
+        <p>Upload <code>clean-language/SKILL.md</code> and the files under <code>clean-language/references/</code> to the project knowledge. Keep the precedence rules intact. They prevent stylistic cleanup from changing technical, legal, policy, contractual, or factual meaning.</p>
+      </section>
+
+      <section>
+        <h2>Other AI tools and API calls</h2>
+        <p>Use the contents of <code>SKILL.md</code> as a system instruction. Provide the reference files when the model needs detailed examples, context rules, anti patterns, or the final quality checklist.</p>
+        <p>Clean Language works with ChatGPT, Claude, Gemini, Microsoft Copilot, local models, and other systems that accept reusable instructions or project knowledge.</p>
+      </section>
+
+      <section>
+        <h2>Prompt examples</h2>
+        <h3>Rewrite a draft</h3>
+        <pre><code>Apply Clean Language to this draft.
+Preserve every fact, date, figure, qualification,
+and technical term. Remove generic AI tone,
+filler, contrast framing, and unnecessary dashes.</code></pre>
+        <h3>Audit without rewriting</h3>
+        <pre><code>Audit this document using Clean Language.
+Identify robotic phrasing, filler, vague claims,
+repetition, hidden ownership, and dash overuse.
+Do not rewrite the text.</code></pre>
+        <h3>Prohibit em dashes and en dashes</h3>
+        <pre><code>Apply Clean Language and use no em dashes or en dashes.
+Use commas, colons, parentheses, or separate sentences.</code></pre>
+        <h3>Technical and policy writing</h3>
+        <pre><code>Apply Clean Language with minimal intervention.
+Preserve commands, identifiers, normative terms,
+control language, and all statements of uncertainty.</code></pre>
+      </section>
+
+      <section>
+        <h2>Recommended operating modes</h2>
+        <ul>
+          <li><strong>Draft:</strong> create finished prose from notes or an objective.</li>
+          <li><strong>Rewrite:</strong> replace supplied prose while preserving meaning.</li>
+          <li><strong>Proofread:</strong> correct mechanics with minimal stylistic change.</li>
+          <li><strong>Audit:</strong> identify defects without rewriting.</li>
+          <li><strong>Adapt:</strong> change audience, channel, tone, length, or format.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language is open source software created by Jeff Posluns.</p>
+    <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="https://github.com/jposluns/ai-language">GitHub</a></div>
+  </footer>
+</body>
+</html>
