@@ -7,9 +7,14 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag to create, for example v1.0.0"
+        description: "Release tag to create, for example v1.0.2"
         required: true
         type: string
+      force:
+        description: "Overwrite the tag even if it already has a published release. Leave unchecked; a published version should not be republished with different bytes."
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -18,7 +23,7 @@ jobs:
   package-and-release:
     runs-on: ubuntu-latest
     env:
-      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || startsWith(github.ref, 'refs/tags/') && github.ref_name || 'v1.0.0' }}
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
 
     steps:
       - name: Check out repository
@@ -36,7 +41,7 @@ jobs:
             exit 1
           fi
 
-      - name: Build deterministic ZIP and checksum
+      - name: Package the skill as a ZIP and checksum it
         shell: bash
         run: |
           set -euo pipefail
@@ -67,13 +72,25 @@ jobs:
       - name: Create or update GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
+          FORCE: ${{ inputs.force }}
         shell: bash
         run: |
           set -euo pipefail
-          # A manual dispatch releases the checked-out commit under RELEASE_TAG,
-          # moving the tag there if it already exists. A tag push leaves the tag
-          # where it was pushed.
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          # A manual dispatch releases the checked-out commit under RELEASE_TAG.
+          # It refuses to move a tag that already has a published release, so a
+          # published, checksummed version is never quietly replaced with
+          # different bytes. Cut a new version instead, or set the force input to
+          # overwrite deliberately. A tag push leaves the tag where it was pushed.
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
+              if [ "${FORCE}" != "true" ]; then
+                echo "Release ${RELEASE_TAG} already exists." >&2
+                echo "Republishing different bytes under a published version would break its checksum as a trust signal." >&2
+                echo "Cut a new version, or re-run with the force input enabled to overwrite ${RELEASE_TAG} deliberately." >&2
+                exit 1
+              fi
+              echo "force is enabled; moving published tag ${RELEASE_TAG} to ${GITHUB_SHA}."
+            fi
             git tag -f "${RELEASE_TAG}" "${GITHUB_SHA}"
             git push --force origin "refs/tags/${RELEASE_TAG}"
           elif ! git rev-parse "${RELEASE_TAG}" >/dev/null 2>&1; then
