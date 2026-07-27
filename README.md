@@ -1,6 +1,6 @@
 # Clean Language
 
-Clean Language is a cross-platform language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing precise, direct, natural prose.
+Clean Language is a cross-platform editorial standard for AI writing. It supports drafting, rewriting, proofreading, adapting, and reviewing precise, direct, natural prose.
 
 It removes common AI-writing patterns such as robotic tone, filler, contrast framing, unnecessary em dashes and en dashes, fake enthusiasm, repeated conclusions, business jargon, and vague claims while preserving factual, technical, legal, policy, contractual, and standards meaning.
 
