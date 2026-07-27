@@ -1,0 +1,69 @@
+# AI Language
+
+A canonical language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing prose in Jeff Posluns' preferred style.
+
+The repository uses one cross-platform skill definition for ChatGPT and Claude. The core skill lives in [`jeff-language/`](jeff-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude ignores that file and reads the same `SKILL.md` and references.
+
+## Design goals
+
+- Preserve factual, technical, legal, policy, contractual, and standards meaning.
+- Lead with conclusions, decisions, requests, findings, and required actions.
+- Produce concise, information-dense Oxford English.
+- Remove common AI-writing patterns without imposing arbitrary grammatical bans.
+- Adapt correctly to executive, technical, governance, incident, email, Teams, and LinkedIn contexts.
+- Separate mandatory language rules from contextual heuristics.
+
+## Repository structure
+
+```text
+ai-language/
+├── README.md
+├── LICENSE
+├── NOTICE.md
+└── jeff-language/
+    ├── SKILL.md
+    ├── agents/
+    │   └── openai.yaml
+    └── references/
+        ├── anti-patterns.md
+        ├── context-modes.md
+        ├── examples.md
+        └── qa-checklist.md
+```
+
+## ChatGPT installation
+
+Package the `jeff-language` directory as `skill.zip`, then upload it through the ChatGPT Skills interface.
+
+```bash
+python /path/to/skill-creator/scripts/package_skill.py ./jeff-language ./dist
+```
+
+The resulting archive must be named `skill.zip` and contain one skill entry point.
+
+## Claude Code installation
+
+Copy or clone the skill directory into the project or user skill location used by Claude Code:
+
+```bash
+mkdir -p .claude/skills
+cp -R /path/to/ai-language/jeff-language .claude/skills/jeff-language
+```
+
+For a user-level installation, place the directory under the corresponding user Claude skills directory. Keep `SKILL.md` and its relative `references/` paths together.
+
+## Claude Projects or other LLMs
+
+Upload or include `jeff-language/SKILL.md` and the referenced files as project knowledge or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
+
+## Usage examples
+
+- "Rewrite this email using Jeff Language."
+- "Audit this report for generic AI language without changing the technical meaning."
+- "Draft a CIO-level Teams message from these notes."
+- "Proofread this policy clause with minimal intervention."
+- "Adapt this email into a LinkedIn-compatible response."
+
+## Maintenance
+
+Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; both ChatGPT and Claude consume the same content.
