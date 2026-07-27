@@ -7,6 +7,8 @@
   <meta name="description" content="Simple click-by-click instructions for installing Clean Language in ChatGPT, Claude, Gemini, and other AI tools. No command line, coding, or GitHub experience required.">
   <link rel="canonical" href="https://cleanlanguage.ai/install/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#145c3b">
   <link rel="stylesheet" href="/styles.css?v=20260727-3">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Install Clean Language without technical knowledge">
@@ -17,13 +19,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Clean Language, a free cross-platform editorial standard for AI writing.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Install Clean Language without technical knowledge">
+  <meta name="twitter:description" content="Click-by-click setup for ChatGPT Skills, Claude Skills, Gemini Gems, and other AI systems.">
   <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
     <nav aria-label="Primary navigation">
-      <a href="/">Home</a>
+      <a href="/" class="nav-collapse">Home</a>
       <a href="/patterns/">AI patterns</a>
       <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
@@ -229,23 +233,6 @@ Do not rewrite it:
     <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
     <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a></div>
   </footer>
-  <script>
-    document.querySelectorAll('[data-copy-target]').forEach(function (button) {
-      button.addEventListener('click', function () {
-        var source = document.getElementById(button.getAttribute('data-copy-target'));
-        if (!source || !navigator.clipboard) return;
-        navigator.clipboard.writeText(source.textContent).then(function () {
-          var original = button.textContent;
-          var status = document.getElementById('copy-status');
-          button.textContent = 'Copied';
-          if (status) { status.textContent = 'Prompt copied to clipboard'; }
-          setTimeout(function () {
-            button.textContent = original;
-            if (status) { status.textContent = ''; }
-          }, 2000);
-        });
-      });
-    });
-  </script>
+  <script src="/js/copy.js" defer></script>
 </body>
 </html>

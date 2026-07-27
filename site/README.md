@@ -19,8 +19,14 @@ Add `cleanlanguage.ai` as the custom domain after the first deployment.
 - `index.html`: homepage and platform installation buttons
 - `install/index.html`: click-by-click installation instructions
 - `patterns/index.html`: common AI-writing patterns and anti-patterns
+- `verify/index.html`: plain-language download verification guide
+- `404.html`: not-found page
 - `styles.css`: shared responsive styles
+- `js/copy.js`: copy-to-clipboard behaviour for the install page
 - `favicon.svg`: site icon
+- `apple-touch-icon.png`: home-screen icon for Apple devices
+- `og-image.png`: social sharing preview image
+- `downloads/`: portable Clean Language instructions file
 - `robots.txt`: crawler directives
 - `sitemap.xml`: search-engine sitemap
 - `_headers`: Cloudflare Pages security and caching headers
