@@ -31,7 +31,7 @@ The matching checksum is available as [`clean-language.zip.sha256`](https://gith
 
 Use this when Skills or code execution are unavailable.
 
-1. Open the [portable Clean Language instructions](https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt) and save the file.
+1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt).
 2. In Claude, click **Projects**, then **New Project**.
 3. Name the project **Clean Language**.
 4. Under **Project knowledge**, click **+** and upload the saved file.
@@ -45,7 +45,7 @@ Use the Clean Language instructions in project knowledge for every response unle
 
 Use this method when your ChatGPT account shows **Plugins** and **Skills**.
 
-1. Open the [portable Clean Language instructions](https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt) and save the file as `clean-language-instructions.txt`.
+1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt). It saves as `clean-language-instructions.txt`.
 2. Open ChatGPT.
 3. In the left menu, click **Plugins**.
 4. At the top of the Plugin Directory, click **Skills**.
@@ -76,7 +76,7 @@ Follow these writing rules for this conversation.
 
 The easiest reusable Gemini method is a custom Gem.
 
-1. Open the [portable Clean Language instructions](https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt) and save the file as `clean-language-instructions.txt`.
+1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt). It saves as `clean-language-instructions.txt`.
 2. On a computer, open Gemini.
 3. Open the menu on the left.
 4. Click **Gems**. When necessary, click **Settings and help**, then **Gems**.
@@ -98,7 +98,7 @@ After saving it, open **Gems** and select **Clean Language** whenever you need i
 
 Clean Language works with Microsoft Copilot, local models, API-based assistants, and other systems that accept custom instructions, project knowledge, system prompts, or uploaded reference files.
 
-1. Open the [portable Clean Language instructions](https://raw.githubusercontent.com/jposluns/ai-language/main/clean-language-instructions.txt).
+1. Download the [portable Clean Language instructions](https://cleanlanguage.ai/downloads/clean-language-instructions.txt).
 2. Save the file or copy its contents.
 3. Add it to the AI tool as custom instructions, project knowledge, a system prompt, or an attached reference file.
 4. Enter:
@@ -139,4 +139,4 @@ The resulting archive must contain one `SKILL.md` entry point and retain its rel
 
 ## Package contents and assurance
 
-`clean-language.zip` contains the `clean-language/` directory with `SKILL.md`, platform metadata, and reference material. It contains no executable scripts, software dependencies, or instructions that require external network access.
+`clean-language.zip` contains the `clean-language/` directory with `SKILL.md` and reference material. It contains no executable code and makes no network calls.
