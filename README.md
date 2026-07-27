@@ -2,7 +2,7 @@
 
 Clean Language is a cross-platform language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing precise, direct, natural prose.
 
-The project uses one canonical skill definition for ChatGPT, Claude, and Gemini CLI. The core skill lives in [`clean-language/`](clean-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude and Gemini CLI read the same `SKILL.md` and references.
+The project uses one canonical skill definition for ChatGPT, Claude, Gemini, and other compatible AI systems. The core skill lives in [`clean-language/`](clean-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude, Gemini CLI, and compatible Agent Skills clients read the same `SKILL.md` and references.
 
 Project site: [cleanlanguage.ai](https://cleanlanguage.ai)
 
@@ -22,6 +22,10 @@ ai-language/
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
+├── clean-language-instructions.txt
+├── .github/
+│   └── workflows/
+│       └── release-skill.yml
 ├── site/
 │   ├── index.html
 │   ├── styles.css
@@ -53,6 +57,21 @@ Connect this GitHub repository to Cloudflare Pages using these settings:
 
 Add `cleanlanguage.ai` as the custom domain after the first deployment. The `site/` directory contains static HTML, responsive CSS, Open Graph metadata, structured data, a sitemap, crawler directives, and Cloudflare Pages security headers.
 
+## Packaged releases
+
+Each tagged release produces two GitHub Release assets:
+
+- `clean-language.zip`, containing the upload-ready skill directory;
+- `clean-language.zip.sha256`, containing its SHA-256 checksum.
+
+The stable download URL is:
+
+```text
+https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip
+```
+
+The package contains prose instructions, metadata, and reference material. It contains no executable scripts, dependencies, or instructions that require external network access.
+
 ## ChatGPT installation
 
 Package the `clean-language` directory as `skill.zip`, then upload it through the ChatGPT Skills interface.
@@ -63,9 +82,11 @@ python /path/to/skill-creator/scripts/package_skill.py ./clean-language ./dist
 
 The resulting archive must be named `skill.zip` and contain one skill entry point.
 
-## Claude Code installation
+## Claude installation
 
-Copy or clone the skill directory into the project or user skill location used by Claude Code:
+Ordinary Claude users can download `clean-language.zip` from the latest GitHub Release and upload it through **Customize > Skills**. Enable **Code execution and file creation** first when Claude requires it.
+
+Claude Code users can copy or clone the skill directory into the project or user skill location:
 
 ```bash
 mkdir -p .claude/skills
@@ -93,9 +114,9 @@ gemini skills list
 
 Inside an interactive Gemini CLI session, use `/skills list` to confirm discovery and `/skills reload` after changing the skill files. Gemini activates the skill when a request matches its description and asks for consent before loading the full instructions and references.
 
-## Claude Projects or other LLMs
+## Gemini, Claude Projects, and other AI systems
 
-Upload or include `clean-language/SKILL.md` and the referenced files as project knowledge or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
+Upload or include `clean-language/SKILL.md`, `clean-language-instructions.txt`, and the referenced files as project knowledge, Gem knowledge, or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
 
 ## Usage examples
 
@@ -117,4 +138,4 @@ Third-party material retains its original licence. See [NOTICE.md](NOTICE.md).
 
 ## Maintenance
 
-Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; ChatGPT, Claude, and Gemini CLI consume the same content.
+Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; ChatGPT, Claude, Gemini, and other compatible AI systems consume the same content.
