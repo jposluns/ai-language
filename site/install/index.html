@@ -78,6 +78,7 @@
         <div class="step-actions">
           <code id="claude-test-prompt">Apply Clean Language to this draft:</code>
           <button type="button" class="button secondary" data-copy-target="claude-test-prompt">Copy prompt</button>
+          <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
         </div>
 
         <div class="notice"><strong>Team or Enterprise:</strong> an organization owner must enable both <strong>Code execution and file creation</strong> and <strong>Skills</strong> in <a href="https://claude.ai/admin-settings/skills" target="_blank" rel="noopener noreferrer">Organization settings, then Skills</a>. An owner can upload Clean Language once to provision it for the whole organization, after which it appears for every member automatically and members do not upload it individually.</div>
@@ -211,8 +212,13 @@ Do not rewrite it:
         if (!source || !navigator.clipboard) return;
         navigator.clipboard.writeText(source.textContent).then(function () {
           var original = button.textContent;
+          var status = document.getElementById('copy-status');
           button.textContent = 'Copied';
-          setTimeout(function () { button.textContent = original; }, 2000);
+          if (status) { status.textContent = 'Prompt copied to clipboard'; }
+          setTimeout(function () {
+            button.textContent = original;
+            if (status) { status.textContent = ''; }
+          }, 2000);
         });
       });
     });
