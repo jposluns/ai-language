@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install Clean Language in ChatGPT, Claude, Gemini, and Other AI Tools</title>
+  <meta name="description" content="Simple click-by-click instructions for installing Clean Language in ChatGPT, Claude, Gemini, and other AI tools. No command line, coding, or GitHub experience required.">
+  <link rel="canonical" href="https://cleanlanguage.ai/install/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css?v=20260727-3">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Install Clean Language without technical knowledge">
+  <meta property="og:description" content="Click-by-click setup for ChatGPT Skills, Claude Skills, Gemini Gems, and other AI systems.">
+  <meta property="og:url" content="https://cleanlanguage.ai/install/">
+  <meta property="og:image" content="https://cleanlanguage.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clean Language, a free cross-platform editorial standard for AI writing.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/patterns/">AI patterns</a>
+      <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Simple installation</p>
+      <h1>Pick the AI you use and follow the buttons.</h1>
+      <p>You do not need a command line, a developer account, or knowledge of GitHub. These instructions cover ChatGPT, Claude, Gemini, and other AI systems.</p>
+    </section>
+
+    <article class="content">
+      <div class="platform-actions" aria-label="Installation options">
+        <a class="platform-button claude" href="#claude"><span class="platform-icon" aria-hidden="true">C</span><span><strong>Claude setup</strong><small>Download, upload, and enable the Skill</small></span></a>
+        <a class="platform-button chatgpt" href="#chatgpt"><span class="platform-icon" aria-hidden="true">G</span><span><strong>ChatGPT instructions</strong><small>Set up through ChatGPT Skills</small></span></a>
+        <a class="platform-button gemini" href="#gemini"><span class="platform-icon" aria-hidden="true">✦</span><span><strong>Gemini instructions</strong><small>Create a reusable Clean Language Gem</small></span></a>
+        <a class="platform-button guide" href="#other-ai"><span class="platform-icon" aria-hidden="true">+</span><span><strong>Other AI systems</strong><small>Use the portable instruction file</small></span></a>
+        <a class="platform-button source" href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer"><span class="platform-icon" aria-hidden="true">&lt;/&gt;</span><span><strong>View source on GitHub</strong><small>Review every rule and release</small></span></a>
+      </div>
+
+      <section id="claude">
+        <h2>Claude website or Claude Desktop</h2>
+        <p class="verified">Last verified 27 July 2026.</p>
+        <p><strong>This is the recommended Claude method.</strong> It installs the complete Skill, so Claude uses the canonical instructions and reference files in every chat rather than a single project.</p>
+
+        <div class="notice">
+          <p><strong>First, turn on code execution. The Skills section does not appear without it.</strong></p>
+          <p>On Free, Pro, and Max, open <a href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener noreferrer">Settings, then Capabilities</a> and enable <strong>Code execution and file creation</strong>. If the Skills section is missing later, this setting is the reason.</p>
+          <p>Install from a <strong>desktop browser</strong>. The mobile apps are not documented to support skill upload.</p>
+        </div>
+
+        <h3>Step 1: download the Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="/claude/download">Download clean-language.zip</a>
+          <a class="button secondary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256" target="_blank" rel="noopener noreferrer">Verify the SHA-256 checksum</a>
+        </div>
+        <p>Your browser saves a file named <code>clean-language.zip</code>. Do not unzip it. The Skill is prose instructions and reference material only. It contains no executable code and makes no network calls.</p>
+
+        <h3>Step 2: upload it to Claude</h3>
+        <div class="step-actions">
+          <a class="button primary" href="https://claude.ai/customize/skills" target="_blank" rel="noopener noreferrer">Open Claude Skills</a>
+        </div>
+        <p>On the Skills page:</p>
+        <ol>
+          <li>Click the <strong>+</strong> button, then <strong>+ Create skill</strong>.</li>
+          <li>Click <strong>Upload a skill</strong>.</li>
+          <li>Select the downloaded <code>clean-language.zip</code> file.</li>
+          <li>Make sure <strong>Clean Language</strong> is switched on in your Skills list.</li>
+        </ol>
+
+        <p>Test it in a new chat. Copy this prompt, paste it, then add your text:</p>
+        <div class="step-actions">
+          <code id="claude-test-prompt">Apply Clean Language to this draft:</code>
+          <button type="button" class="button secondary" data-copy-target="claude-test-prompt">Copy prompt</button>
+          <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+        </div>
+
+        <div class="notice"><strong>Team or Enterprise:</strong> an organization owner must enable both <strong>Code execution and file creation</strong> and <strong>Skills</strong> in <a href="https://claude.ai/admin-settings/skills" target="_blank" rel="noopener noreferrer">Organization settings, then Skills</a>. An owner can upload Clean Language once to provision it for the whole organization, after which it appears for every member automatically and members do not upload it individually.</div>
+
+        <details>
+          <summary><strong>Fallback: use a Claude Project instead</strong></summary>
+          <p>Use this only if your organization has disabled Skills or code execution. It applies to one project rather than every chat.</p>
+          <ol>
+            <li>
+              <div class="step-actions">
+                <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
+                <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
+              </div>
+            </li>
+            <li>In Claude, click <strong>Projects</strong>, then <strong>New Project</strong>.</li>
+            <li>Name it <strong>Clean Language</strong>.</li>
+            <li>Under <strong>Project knowledge</strong>, click <strong>+</strong> and upload the saved file.</li>
+            <li>Set the project instructions to: <code>Use the Clean Language instructions in project knowledge for every response unless I explicitly tell you not to.</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="chatgpt">
+        <h2>ChatGPT</h2>
+        <p class="verified">Last verified 27 July 2026.</p>
+        <p>ChatGPT reads the same packaged Skill as Claude. Upload it once, and ChatGPT applies Clean Language when your request matches.</p>
+
+        <h3>Step 1: download the Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="/download">Download clean-language.zip</a>
+          <a class="button secondary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256" target="_blank" rel="noopener noreferrer">Verify the SHA-256 checksum</a>
+        </div>
+        <p>Your browser saves a file named <code>clean-language.zip</code>. Do not unzip it. The Skill is prose instructions and reference material only. It contains no executable code and makes no network calls.</p>
+
+        <h3>Step 2: upload it to ChatGPT</h3>
+        <ol>
+          <li>Open <strong>Plugins</strong> in the ChatGPT sidebar, then open <strong>Skills</strong>.</li>
+          <li>Click <strong>Create</strong>, then <strong>Upload from your computer</strong>.</li>
+          <li>Select the downloaded <code>clean-language.zip</code> file.</li>
+          <li>Review the skill, then install it.</li>
+        </ol>
+        <p>Test it in a new chat: <code>Apply Clean Language to this message: [paste your text]</code></p>
+        <div class="notice"><strong>Workspace accounts:</strong> your administrator may need to allow members to use and upload Skills.</div>
+
+        <details>
+          <summary><strong>Fallback: build the skill from the instructions file</strong></summary>
+          <p>Use this if your account cannot upload a skill.</p>
+          <ol>
+            <li>
+              <div class="step-actions">
+                <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
+                <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
+              </div>
+              The file saves as <code>clean-language-instructions.txt</code>.
+            </li>
+            <li>Open ChatGPT, open <strong>Plugins</strong>, then <strong>Skills</strong>.</li>
+            <li>Click <strong>Create</strong>, then <strong>Create with chat</strong>.</li>
+            <li>Type: <code>Create a skill named Clean Language using the instructions in the file I am about to upload.</code></li>
+            <li>Attach <code>clean-language-instructions.txt</code> and send the message.</li>
+            <li>When ChatGPT shows the completed skill, install it.</li>
+          </ol>
+          <p>If you do not see Skills, attach the instructions file to a normal chat and say: <code>Follow these writing rules for this conversation.</code></p>
+        </details>
+      </section>
+
+      <section id="gemini">
+        <h2>Gemini website or Gemini app</h2>
+        <p class="verified">Last verified 27 July 2026.</p>
+        <p>The easiest reusable method is a custom Gem. Create it once on the Gemini website, then use it from the website, mobile app, or supported Google Workspace side panel.</p>
+        <ol>
+          <li>
+            <div class="step-actions">
+              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
+            </div>
+            The file saves as <code>clean-language-instructions.txt</code>.
+          </li>
+          <li>On a computer, open <strong>gemini.google.com</strong>.</li>
+          <li>Open the menu on the left.</li>
+          <li>Click <strong>Gems</strong>. If you do not see it, click <strong>Settings and help</strong>, then <strong>Gems</strong>.</li>
+          <li>Click <strong>New Gem</strong>.</li>
+          <li>Name it <strong>Clean Language</strong>.</li>
+          <li>In the instructions box, type: <code>Follow the Clean Language instructions in the attached knowledge file for every response.</code></li>
+          <li>Scroll to <strong>Knowledge</strong>.</li>
+          <li>Click <strong>Add files</strong>, then <strong>Upload files</strong>.</li>
+          <li>Select <code>clean-language-instructions.txt</code>.</li>
+          <li>Click <strong>Save</strong>.</li>
+        </ol>
+        <p>To use it later, open Gemini, click <strong>Gems</strong>, then click <strong>Clean Language</strong>.</p>
+        <div class="notice"><strong>Mobile note:</strong> create and edit the Gem on the Gemini website. After saving it, the Gem appears in the Gemini mobile app.</div>
+      </section>
+
+      <section id="other-ai">
+        <h2>Other AI systems</h2>
+        <p>Clean Language also works with Microsoft Copilot, local models, API-based assistants, and other systems that accept custom instructions, system prompts, reusable knowledge, or uploaded files.</p>
+        <ol>
+          <li>
+            <div class="step-actions">
+              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Download instructions</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">View original on GitHub</a>
+            </div>
+          </li>
+          <li>Save the file or copy its contents.</li>
+          <li>Add it to your AI tool as custom instructions, project knowledge, a system prompt, or an attached reference file.</li>
+          <li>Tell the AI: <code>Use the Clean Language instructions for every response unless I explicitly tell you not to.</code></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>How to use Clean Language</h2>
+        <p>You can paste rough notes or finished text. Use one of these requests:</p>
+        <pre><code>Rewrite this using Clean Language:
+[paste text]</code></pre>
+        <pre><code>Proofread this using Clean Language.
+Fix mistakes but do not change my tone:
+[paste text]</code></pre>
+        <pre><code>Audit this for robotic AI language,
+filler, contrast framing, and dash overuse.
+Do not rewrite it:
+[paste text]</code></pre>
+        <pre><code>Write this with no em dashes or en dashes:
+[paste notes]</code></pre>
+      </section>
+
+      <section>
+        <h2>For technical users</h2>
+        <p>Developers can install the full Agent Skill from the <a href="https://github.com/jposluns/ai-language">GitHub repository</a> for ChatGPT, Claude Code, Gemini CLI, and compatible Agent Skills clients.</p>
+      </section>
+
+      <section id="assurance">
+        <h2>Trust and assurance</h2>
+        <ul>
+          <li>The skill contains no executable code and makes no network calls.</li>
+          <li>Every rule and reference file is publicly reviewable in the <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub repository</a>.</li>
+          <li>Each tagged release provides a SHA-256 checksum, so you can verify the download.</li>
+          <li>Clean Language is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</li>
+          <li>Platform behaviour on ChatGPT, Claude, and Gemini is set by those providers and is outside this project's control.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
+    <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+  </footer>
+  <script>
+    document.querySelectorAll('[data-copy-target]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var source = document.getElementById(button.getAttribute('data-copy-target'));
+        if (!source || !navigator.clipboard) return;
+        navigator.clipboard.writeText(source.textContent).then(function () {
+          var original = button.textContent;
+          var status = document.getElementById('copy-status');
+          button.textContent = 'Copied';
+          if (status) { status.textContent = 'Prompt copied to clipboard'; }
+          setTimeout(function () {
+            button.textContent = original;
+            if (status) { status.textContent = ''; }
+          }, 2000);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
