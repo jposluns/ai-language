@@ -2,7 +2,7 @@
 
 Clean Language is a cross-platform language and editorial skill for drafting, rewriting, proofreading, adapting, and reviewing precise, direct, natural prose.
 
-The project uses one canonical skill definition for ChatGPT and Claude. The core skill lives in [`clean-language/`](clean-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude ignores that file and reads the same `SKILL.md` and references.
+The project uses one canonical skill definition for ChatGPT, Claude, and Gemini CLI. The core skill lives in [`clean-language/`](clean-language/). Platform-specific metadata is additive: ChatGPT uses `agents/openai.yaml`; Claude and Gemini CLI read the same `SKILL.md` and references.
 
 Project site: [cleanlanguage.ai](https://cleanlanguage.ai)
 
@@ -74,6 +74,25 @@ cp -R /path/to/ai-language/clean-language .claude/skills/clean-language
 
 For a user-level installation, place the directory under the corresponding user Claude skills directory. Keep `SKILL.md` and its relative `references/` paths together.
 
+## Gemini CLI installation
+
+Gemini CLI supports the same Agent Skills structure. Install Clean Language directly from GitHub:
+
+```bash
+gemini skills install https://github.com/jposluns/ai-language.git \
+  --path clean-language
+```
+
+Add `--scope workspace` for a project-specific installation or use the default user scope for availability across projects. Gemini CLI discovers user skills under `~/.gemini/skills/` and workspace skills under `.gemini/skills/`.
+
+Verify the installation:
+
+```bash
+gemini skills list
+```
+
+Inside an interactive Gemini CLI session, use `/skills list` to confirm discovery and `/skills reload` after changing the skill files. Gemini activates the skill when a request matches its description and asks for consent before loading the full instructions and references.
+
 ## Claude Projects or other LLMs
 
 Upload or include `clean-language/SKILL.md` and the referenced files as project knowledge or system instructions. Preserve the precedence section and contextual exceptions; they prevent anti-pattern rules from changing technical or legal meaning.
@@ -98,4 +117,4 @@ Third-party material retains its original licence. See [NOTICE.md](NOTICE.md).
 
 ## Maintenance
 
-Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; both ChatGPT and Claude consume the same content.
+Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; ChatGPT, Claude, and Gemini CLI consume the same content.
