@@ -1,0 +1,71 @@
+name: Release Clean Language Skill
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to create, for example v1.0.0"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate skill structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f clean-language/SKILL.md
+          test -d clean-language/references
+          grep -Eq '^name:[[:space:]]*clean-language[[:space:]]*$' clean-language/SKILL.md
+          if find clean-language -type f \( -name '*.py' -o -name '*.js' -o -name '*.sh' -o -name '*.exe' -o -name '*.dll' \) | grep -q .; then
+            echo "Unexpected executable or script content found in the skill package."
+            exit 1
+          fi
+
+      - name: Build deterministic ZIP and checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf dist
+          mkdir -p dist
+          zip -r -X dist/clean-language.zip clean-language \
+            -x '*/.DS_Store' '*/__MACOSX/*'
+          cd dist
+          sha256sum clean-language.zip > clean-language.zip.sha256
+
+      - name: Create or update GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! git rev-parse "${RELEASE_TAG}" >/dev/null 2>&1; then
+            git tag "${RELEASE_TAG}"
+            git push origin "${RELEASE_TAG}"
+          fi
+          if gh release view "${RELEASE_TAG}" >/dev/null 2>&1; then
+            gh release upload "${RELEASE_TAG}" \
+              dist/clean-language.zip \
+              dist/clean-language.zip.sha256 \
+              --clobber
+          else
+            gh release create "${RELEASE_TAG}" \
+              dist/clean-language.zip \
+              dist/clean-language.zip.sha256 \
+              --title "Clean Language ${RELEASE_TAG}" \
+              --generate-notes
+          fi
