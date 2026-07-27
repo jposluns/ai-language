@@ -248,7 +248,7 @@ footer div { display: flex; flex-wrap: wrap; gap: 18px; }
 @media (max-width: 640px) {
   .site-header { align-items: flex-start; }
   nav { justify-content: flex-end; gap: 12px; font-size: 0.9rem; }
-  nav a:first-child, nav a:nth-child(2) { display: none; }
+  nav a.nav-collapse { display: none; }
   .hero { margin-top: 48px; }
   .platform-actions { grid-template-columns: 1fr; }
   .platform-button, .platform-button:nth-child(4), .platform-button:nth-child(5), .platform-button:last-child { grid-column: span 1; }
