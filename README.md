@@ -22,6 +22,14 @@ ai-language/
 ├── README.md
 ├── LICENSE
 ├── NOTICE.md
+├── site/
+│   ├── index.html
+│   ├── styles.css
+│   ├── patterns/
+│   ├── install/
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── _headers
 └── clean-language/
     ├── SKILL.md
     ├── agents/
@@ -32,6 +40,18 @@ ai-language/
         ├── examples.md
         └── qa-checklist.md
 ```
+
+## Website deployment with Cloudflare Pages
+
+Connect this GitHub repository to Cloudflare Pages using these settings:
+
+- Production branch: `main`
+- Framework preset: `None`
+- Build command: leave blank
+- Build output directory: `site`
+- Root directory: leave blank
+
+Add `cleanlanguage.ai` as the custom domain after the first deployment. The `site/` directory contains static HTML, responsive CSS, Open Graph metadata, structured data, a sitemap, crawler directives, and Cloudflare Pages security headers.
 
 ## ChatGPT installation
 
