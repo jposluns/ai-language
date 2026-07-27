@@ -1,4 +1,0 @@
-interface:
-  display_name: "Jeff Language"
-  short_description: "Draft and edit prose in Jeff Posluns' preferred style"
-  default_prompt: "Apply Jeff Language to draft, rewrite, or review this prose while preserving factual and technical meaning."
