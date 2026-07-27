@@ -2,10 +2,6 @@ name: Release Clean Language Skill
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/release-skill.yml"
     tags:
       - "v*"
   workflow_dispatch:
@@ -46,10 +42,27 @@ jobs:
           set -euo pipefail
           rm -rf dist
           mkdir -p dist
-          zip -r -X dist/clean-language.zip clean-language \
-            -x '*/.DS_Store' '*/__MACOSX/*'
+          zip -r -X dist/clean-language.zip \
+            clean-language/SKILL.md \
+            clean-language/references \
+            -x '*/.DS_Store' '*/__MACOSX/*' '*/.git*'
           cd dist
           sha256sum clean-language.zip > clean-language.zip.sha256
+
+      - name: Verify archive layout
+        shell: bash
+        run: |
+          set -euo pipefail
+          entries=$(unzip -Z1 dist/clean-language.zip)
+          echo "${entries}"
+          top=$(printf '%s\n' "${entries}" | cut -d/ -f1 | sort -u)
+          test "${top}" = "clean-language"
+          printf '%s\n' "${entries}" | grep -qx 'clean-language/SKILL.md'
+          printf '%s\n' "${entries}" | grep -q '^clean-language/references/'
+          if printf '%s\n' "${entries}" | grep -qiE 'DS_Store|__MACOSX|/\.git'; then
+            echo "Unexpected artefact found in archive."
+            exit 1
+          fi
 
       - name: Create or update GitHub Release
         env:
