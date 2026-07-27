@@ -215,6 +215,7 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
 .content ul, .content ol { padding-left: 22px; }
 .content pre { background: var(--code); color: #e8eee9; border-radius: 14px; padding: 22px; overflow-x: auto; }
 .notice { padding: 20px 22px; border-radius: 14px; background: var(--accent-soft); border: 1px solid #b9d0c1; }
+.verified { margin: -8px 0 20px; font-size: 0.85rem; color: var(--muted); }
 .notice p { margin: 0 0 10px; }
 .notice p:last-child { margin-bottom: 0; }
 .step-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 18px; }
