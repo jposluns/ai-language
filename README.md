@@ -86,6 +86,16 @@ Upload or include `clean-language/SKILL.md` and the referenced files as project 
 - "Proofread this policy clause with minimal intervention."
 - "Adapt this email into a LinkedIn-compatible response."
 
+## Licence
+
+Except where otherwise noted, the original Clean Language material is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
+
+Suggested attribution:
+
+> Clean Language by Jeff Posluns, https://cleanlanguage.ai, licensed under CC BY-SA 4.0. Changes were made.
+
+Third-party material retains its original licence. See [NOTICE.md](NOTICE.md).
+
 ## Maintenance
 
 Treat `SKILL.md` as the control plane. Put detailed pattern catalogues, examples, and channel rules in `references/`. Update the canonical skill once; both ChatGPT and Claude consume the same content.
