@@ -70,7 +70,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if ! git rev-parse "${RELEASE_TAG}" >/dev/null 2>&1; then
+          # A manual dispatch releases the checked-out commit under RELEASE_TAG,
+          # moving the tag there if it already exists. A tag push leaves the tag
+          # where it was pushed.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            git tag -f "${RELEASE_TAG}" "${GITHUB_SHA}"
+            git push --force origin "refs/tags/${RELEASE_TAG}"
+          elif ! git rev-parse "${RELEASE_TAG}" >/dev/null 2>&1; then
             git tag "${RELEASE_TAG}"
             git push origin "${RELEASE_TAG}"
           fi
