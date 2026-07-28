@@ -1,0 +1,39 @@
+name: Link check
+
+# Verifies that internal links resolve: root-relative and document-relative
+# href/src in the site HTML, and relative Markdown link targets in the tracked
+# docs. See tools/check-links.py for scope. External URLs are out of scope.
+
+on:
+  pull_request:
+    paths:
+      - "site/**"
+      - "*.md"
+      - ".claude/CLAUDE.md"
+      - "clean-language/SKILL.md"
+      - "tools/check-links.py"
+      - ".github/workflows/link-check.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "site/**"
+      - "*.md"
+      - ".claude/CLAUDE.md"
+      - "clean-language/SKILL.md"
+      - "tools/check-links.py"
+      - ".github/workflows/link-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check internal links resolve
+        shell: bash
+        run: python3 tools/check-links.py
