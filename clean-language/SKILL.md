@@ -10,7 +10,8 @@ description: Draft, rewrite, edit, review, or quality-assure prose using the Cle
 
 Author: Jeff Posluns  
 Web site: https://cleanlanguage.ai/  
-Github: https://github.com/jposluns/ai-language
+Github: https://github.com/jposluns/ai-language  
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 Produce writing that reads as deliberate, technically competent, and written by a capable practitioner rather than generated from a generic communications template.
 

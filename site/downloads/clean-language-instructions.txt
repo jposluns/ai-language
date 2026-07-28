@@ -5,6 +5,7 @@ Version 1.0.6
 Author: Jeff Posluns
 Web site: https://cleanlanguage.ai/
 Github: https://github.com/jposluns/ai-language
+License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 Use these instructions whenever you draft, rewrite, proofread, adapt, or review prose.
 
