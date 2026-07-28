@@ -57,6 +57,19 @@ jobs:
             echo "Unexpected executable or script content found in the skill package."
             exit 1
           fi
+          # Any icon the ChatGPT interface config references must exist in the package,
+          # so a shipped skill never points at a missing asset.
+          if [ -f clean-language/agents/openai.yaml ]; then
+            missing_icon=0
+            while IFS= read -r icon; do
+              [ -n "${icon}" ] || continue
+              if [ ! -f "clean-language/${icon#./}" ]; then
+                echo "Icon referenced in agents/openai.yaml is missing: ${icon}"
+                missing_icon=1
+              fi
+            done < <(sed -n 's/.*icon_[a-z]*:[[:space:]]*"\(\.\/[^"]*\)".*/\1/p' clean-language/agents/openai.yaml)
+            test "${missing_icon}" -eq 0
+          fi
 
       - name: Package the skill as a ZIP and checksum it
         shell: bash
@@ -67,6 +80,8 @@ jobs:
           zip -r -X dist/clean-language.zip \
             clean-language/SKILL.md \
             clean-language/references \
+            clean-language/agents \
+            clean-language/assets \
             -x '*/.DS_Store' '*/__MACOSX/*' '*/.git*'
           # A byte-identical, version-named copy for the releases archive. The
           # stable clean-language.zip stays the always-latest download; every

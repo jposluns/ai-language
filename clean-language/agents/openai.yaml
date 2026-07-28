@@ -1,4 +1,7 @@
 interface:
   display_name: "Clean Language"
   short_description: "Draft and edit precise, direct, natural prose"
+  icon_small: "./assets/CL_icon.svg"
+  icon_large: "./assets/CL_icon.png"
+  brand_color: "#145c3b"
   default_prompt: "Apply Clean Language to draft, rewrite, or review this prose while preserving factual and technical meaning."
