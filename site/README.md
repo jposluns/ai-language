@@ -17,12 +17,17 @@ Add `cleanlanguage.ai` as the custom domain after the first deployment.
 ## Site contents
 
 - `index.html`: homepage and platform installation buttons
-- `install/index.html`: click-by-click installation instructions
+- `standard/index.html`: overview of the standard
 - `patterns/index.html`: common AI-writing patterns and anti-patterns
+- `examples/index.html`: before-and-after examples
+- `channels/index.html`: context rules by channel and document type
+- `checklist/index.html`: the quality checklist
+- `demo/index.html`: worked examples and a prompt to try
+- `install/index.html`: click-by-click installation instructions
 - `verify/index.html`: plain-language download verification guide
 - `404.html`: not-found page
 - `styles.css`: shared responsive styles
-- `js/copy.js`: copy-to-clipboard behaviour for the install page
+- `js/copy.js`: copy-to-clipboard behaviour for the install and demo pages
 - `favicon.svg`: site icon
 - `apple-touch-icon.png`: home-screen icon for Apple devices
 - `og-image.png`: social sharing preview image
@@ -30,6 +35,6 @@ Add `cleanlanguage.ai` as the custom domain after the first deployment.
 - `robots.txt`: crawler directives
 - `sitemap.xml`: search-engine sitemap
 - `_headers`: Cloudflare Pages security and caching headers
-- `_redirects`: redirects for retired site paths
+- `_redirects`: download shortcuts to the latest release assets
 
 The website is framework-free static HTML and CSS. It requires no build process.
