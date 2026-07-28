@@ -61,16 +61,22 @@
 
       <section>
         <h2>Try it on your own writing</h2>
-        <p>Copy the prompt, paste it into ChatGPT, Claude, Gemini, Copilot, or any other assistant, then add your own text where the prompt says to.</p>
+        <p>Copy the prompt, paste it into ChatGPT, Claude, Gemini, Copilot, or any other assistant that can browse the web, then add your own text where the prompt says to. The prompt has the assistant read the standard straight from this project, so it applies the real rules rather than a summary.</p>
 
         <div class="notice">
-          <p><strong>Read any prompt before you paste it.</strong> This is good practice with a prompt from any source, not only this one. The prompt below asks the assistant to rewrite the text you provide and nothing else: it requests no files, no links, and no access to anything on your device or accounts.</p>
+          <p><strong>Read any prompt before you paste it.</strong> This is good practice with a prompt from any source, not only this one. The prompt below asks the assistant to read the Clean Language standard from this project's public GitHub repository and then rewrite the text you provide. It points only at this project's own public files and asks for nothing from your device or accounts.</p>
         </div>
 
-        <pre><code id="demo-prompt">Apply Clean Language to the text below.
-Preserve every fact, figure, quotation, defined term, and technical detail.
-Remove filler, contrast framing, unnecessary dashes, and generic AI tone.
-Do not change the meaning.
+        <pre><code id="demo-prompt">First, read the Clean Language standard from its public GitHub repository at
+https://github.com/jposluns/ai-language. The full standard is in
+clean-language/SKILL.md and the files under clean-language/references/. The same
+rules in a single file are at
+https://raw.githubusercontent.com/jposluns/ai-language/main/site/downloads/clean-language-instructions.txt,
+which may be easier to load. If you cannot reach either, say so rather than
+guessing.
+
+Then apply the standard to the text below. Preserve every fact, figure,
+quotation, defined term, and technical detail, and do not change the meaning.
 
 [paste your text here]</code></pre>
         <div class="step-actions">
@@ -78,7 +84,7 @@ Do not change the meaning.
           <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
         </div>
 
-        <p>For a fuller setup that applies Clean Language automatically, follow the <a href="/install/">install guide</a>.</p>
+        <p>If your assistant cannot reach the web, or you want Clean Language applied to every draft automatically, follow the <a href="/install/">install guide</a> to add it directly.</p>
       </section>
     </article>
 
