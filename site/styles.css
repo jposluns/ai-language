@@ -63,9 +63,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   color: #fff;
   font-size: 0.86rem;
 }
-nav { display: flex; flex-wrap: wrap; gap: 20px; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
 nav a, footer a { text-decoration: none; color: var(--muted); font-weight: 650; }
 nav a:hover, footer a:hover { color: var(--accent); }
+nav a.lang-switch {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+nav a.lang-switch:hover { border-color: var(--accent); color: var(--accent); }
 main { overflow: hidden; }
 .hero {
   width: min(1080px, calc(100% - 32px));

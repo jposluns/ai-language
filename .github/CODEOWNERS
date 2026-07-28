@@ -1,0 +1,7 @@
+# ------------------------------------------------------------------------------
+# DEFAULT OWNERS for everything in the repository
+#
+# Unless a later match takes precedence,they will be requested
+# for review when someone opens a pull request
+# ------------------------------------------------------------------------------
+* @jposluns
