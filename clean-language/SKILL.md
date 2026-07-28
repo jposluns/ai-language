@@ -73,7 +73,8 @@ Do not mechanically delete:
 - absolute terms such as `must`, `never`, `always`, or `prohibited` when they express a verified requirement or invariant;
 - inanimate technical subjects that genuinely perform actions, such as a firewall blocking traffic, a policy requiring approval, or a service returning an error;
 - domain-specific jargon that the intended audience uses precisely;
-- quoted language, official titles, product names, standards text, or contractual wording.
+- quoted language, official titles, product names, standards text, or contractual wording;
+- the separator in a numeric or date range: replace an en dash with a hyphen or the word `to` (`12-14`, or `12 to 14`), and never delete it or merge the values.
 
 ## Match the context
 
