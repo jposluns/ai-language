@@ -66,15 +66,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 nav { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
 nav a, footer a { text-decoration: none; color: var(--muted); font-weight: 650; }
 nav a:hover, footer a:hover { color: var(--accent); }
-.nav-menu { position: relative; }
-.nav-menu > summary { list-style: none; cursor: pointer; color: var(--muted); font-weight: 650; display: inline-flex; align-items: center; gap: 5px; }
-.nav-menu > summary::-webkit-details-marker { display: none; }
-.nav-menu > summary::after { content: "▾"; font-size: 0.72em; }
-.nav-menu[open] > summary::after { content: "▴"; }
-.nav-menu > summary:hover { color: var(--accent); }
-.nav-menu-panel { position: absolute; top: 100%; left: 0; margin-top: 10px; min-width: 210px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 8px; display: grid; gap: 2px; z-index: 30; }
-.nav-menu-panel a { display: block; padding: 9px 12px; border-radius: 9px; white-space: nowrap; color: var(--text); }
-.nav-menu-panel a:hover { background: var(--accent-soft); color: var(--accent); }
 main { overflow: hidden; }
 .hero {
   width: min(1080px, calc(100% - 32px));
@@ -262,7 +253,6 @@ footer div { display: flex; flex-wrap: wrap; gap: 18px; }
   .site-header { align-items: flex-start; }
   nav { justify-content: flex-end; gap: 12px; font-size: 0.9rem; }
   nav a.nav-collapse { display: none; }
-  .nav-menu-panel { position: static; margin-top: 6px; min-width: 0; box-shadow: none; }
   .hero { margin-top: 48px; }
   .platform-actions { grid-template-columns: 1fr; }
   .platform-button, .platform-button.guide, .platform-button.source { grid-column: span 1; }
