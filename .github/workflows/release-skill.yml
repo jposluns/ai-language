@@ -29,6 +29,23 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Read and validate the version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(sed -n 's/^version:[[:space:]]*//p' clean-language/SKILL.md | head -1)"
+          if [ -z "${version}" ]; then
+            echo "No version found in the clean-language/SKILL.md frontmatter." >&2
+            exit 1
+          fi
+          if [ "v${version}" != "${RELEASE_TAG}" ]; then
+            echo "SKILL.md version (${version}) does not match the release tag (${RELEASE_TAG})." >&2
+            echo "Set the version line in clean-language/SKILL.md to match the tag, or cut the matching tag." >&2
+            exit 1
+          fi
+          echo "VERSION=${version}" >> "${GITHUB_ENV}"
+          echo "Releasing version ${version} as ${RELEASE_TAG}."
+
       - name: Validate skill structure
         shell: bash
         run: |
@@ -51,8 +68,13 @@ jobs:
             clean-language/SKILL.md \
             clean-language/references \
             -x '*/.DS_Store' '*/__MACOSX/*' '*/.git*'
+          # A byte-identical, version-named copy for the releases archive. The
+          # stable clean-language.zip stays the always-latest download; every
+          # release also keeps its own clean-language-<version>.zip.
+          cp dist/clean-language.zip "dist/clean-language-${VERSION}.zip"
           cd dist
           sha256sum clean-language.zip > clean-language.zip.sha256
+          sha256sum "clean-language-${VERSION}.zip" > "clean-language-${VERSION}.zip.sha256"
 
       - name: Verify archive layout
         shell: bash
@@ -101,11 +123,15 @@ jobs:
             gh release upload "${RELEASE_TAG}" \
               dist/clean-language.zip \
               dist/clean-language.zip.sha256 \
+              "dist/clean-language-${VERSION}.zip" \
+              "dist/clean-language-${VERSION}.zip.sha256" \
               --clobber
           else
             gh release create "${RELEASE_TAG}" \
               dist/clean-language.zip \
               dist/clean-language.zip.sha256 \
+              "dist/clean-language-${VERSION}.zip" \
+              "dist/clean-language-${VERSION}.zip.sha256" \
               --title "Clean Language ${RELEASE_TAG}" \
               --generate-notes
           fi
