@@ -86,7 +86,7 @@ main { overflow: hidden; }
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
   font-weight: 800;
 }
 h1, h2, h3 { line-height: 1.1; letter-spacing: -0.035em; }
@@ -189,7 +189,7 @@ p { margin: 0 0 18px; }
 }
 .card p { color: var(--muted); margin: 0; }
 .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
-.split > div:first-child p { color: var(--muted); font-size: 1.08rem; }
+.split > div:first-child p:not(.eyebrow) { color: var(--muted); font-size: 1.08rem; }
 .code-panel { background: var(--code); color: #e8eee9; border-radius: 18px; padding: 28px; box-shadow: var(--shadow); }
 .code-title { color: #9db6a6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 800; }
 pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
