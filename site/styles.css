@@ -217,6 +217,10 @@ code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
 }
 .page-hero h1 { font-size: clamp(2.8rem, 6vw, 5.5rem); text-align: left; }
 .page-hero p { color: var(--muted); font-size: 1.2rem; max-width: 760px; }
+.standard-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 30px; }
+.standard-tabs a { display: inline-flex; align-items: center; padding: 8px 15px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-weight: 650; font-size: 0.92rem; text-decoration: none; }
+.standard-tabs a:hover { border-color: var(--accent); color: var(--accent); }
+.standard-tabs a.is-active, .standard-tabs a.is-active:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 .content { width: min(920px, calc(100% - 32px)); margin: 0 auto 120px; }
 .content section { margin: 72px 0; scroll-margin-top: 24px; }
 .content h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); }
