@@ -1,5 +1,7 @@
 CLEAN LANGUAGE INSTRUCTIONS
 
+Version 1.0.5
+
 Use these instructions whenever you draft, rewrite, proofread, adapt, or review prose.
 
 PRIORITY ORDER
