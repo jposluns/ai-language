@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clean Language Before and After Examples</title>
+  <meta name="description" content="Before-and-after examples showing how Clean Language rewrites generic prose while keeping every fact intact. These are the examples the skill uses.">
+  <link rel="canonical" href="https://cleanlanguage.ai/examples/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#145c3b">
+  <link rel="stylesheet" href="/styles.css?v=20260728-1">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Clean Language before and after">
+  <meta property="og:description" content="How Clean Language rewrites generic prose while keeping every fact intact.">
+  <meta property="og:url" content="https://cleanlanguage.ai/examples/">
+  <meta property="og:image" content="https://cleanlanguage.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clean Language, a free cross-platform editorial standard for AI writing.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clean Language before and after">
+  <meta name="twitter:description" content="How Clean Language rewrites generic prose while keeping every fact intact.">
+  <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/" class="nav-collapse">Home</a>
+      <details class="nav-menu">
+        <summary>The standard</summary>
+        <div class="nav-menu-panel">
+          <a href="/standard/">Overview</a>
+          <a href="/patterns/">AI patterns</a>
+          <a href="/examples/">Before and after</a>
+          <a href="/channels/">By channel</a>
+          <a href="/checklist/">Checklist</a>
+        </div>
+      </details>
+      <a href="/demo/">See it work</a>
+      <a href="/install/">Install</a>
+      <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Before and after</p>
+      <h1>The same facts, in fewer words.</h1>
+      <p>These pairs show degree of intervention rather than fixed templates. Every revised version uses only facts present in its source. Where a stronger version needs a specific figure or actor, the source supplies it; the skill never invents one to replace a vague statement.</p>
+    </section>
+
+    <article class="content">
+      <div class="notice"><p><strong>This is the actual guidance the skill uses.</strong> This page presents the skill's example set. Read the exact source, <code>examples.md</code>, on <a href="https://github.com/jposluns/ai-language/blob/main/clean-language/references/examples.md" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div>
+
+      <section>
+        <p class="label">Lead with the conclusion</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>It is worth noting that there are several areas where the current implementation could create challenges: unclear ownership, no rollback procedure, and an untested recovery path.</p></div>
+          <div><span class="label">After</span><p>The current implementation has three unresolved points: unclear ownership, no rollback procedure, and an untested recovery path.</p></div>
+        </div>
+
+        <p class="label">Remove artificial balance</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>The team has made meaningful progress, but the process still lacks an accountable owner, an approval gate, and tested recovery.</p></div>
+          <div><span class="label">After</span><p>The process lacks an accountable owner, an approval gate, and tested recovery.</p></div>
+        </div>
+        <p>Add progress or mitigating evidence only when it changes the assessment.</p>
+
+        <p class="label">Preserve technical agency</p>
+        <p>From the source "After the change review, the infrastructure team configured the firewall to block inbound connections from untrusted networks," either fact can lead, depending on which one matters.</p>
+        <div class="comparison">
+          <div><span class="label">When the configuration is the point</span><p>The firewall blocks inbound connections from untrusted networks.</p></div>
+          <div><span class="label">When accountability is the point</span><p>The infrastructure team configured that firewall rule.</p></div>
+        </div>
+
+        <p class="label">Preserve useful adverbs</p>
+        <div class="comparison">
+          <div><span class="label">Weak modifier</span><p>The system is extremely unreliable.</p></div>
+          <div><span class="label">When data supports it</span><p>The service dropped 14 percent of requests during the test window.</p></div>
+        </div>
+        <p>Use the specific figure only when the source or a measurement provides it. Do not invent a number to replace a vague modifier; if none is available, keep the statement qualitative and flag the missing measurement. A legitimate modifier stays: "The encryption keys are cryptographically isolated from the application workload."</p>
+
+        <p class="label">Executive request</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>I wanted to reach out to see if we could align on the warehouse project: the owner, the critical path, the unresolved dependencies, and the recovery plan, before Thursday at 3 p.m.</p></div>
+          <div><span class="label">After</span><p>Please confirm the warehouse project's owner, critical path, unresolved dependencies, and recovery plan by 3:00 p.m. Thursday.</p></div>
+        </div>
+
+        <p class="label">Replace executive template phrasing</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>The agenda looks highly relevant to my work, particularly the sessions on regulatory interoperability, cyber resilience, and audit readiness.</p></div>
+          <div><span class="label">After</span><p>The agenda covers three areas I work on: regulatory interoperability, cyber resilience, and audit readiness.</p></div>
+        </div>
+        <p>Keep the same topics and state the writer's connection to them, rather than asserting relevance with an intensifier. An abstract-noun frame becomes a direct statement: "My main areas of interest are AI governance and cybersecurity" becomes "I am interested in AI governance and cybersecurity."</p>
+
+        <p class="label">Incident status</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>The situation appears to be under control, and the team is continuing to work diligently: the affected server is isolated, file transfers resumed at 06:40, the root cause is not yet confirmed, and the legacy environment still requires rebuild approval.</p></div>
+          <div><span class="label">After</span><p>The affected server is isolated. File transfers resumed at 06:40. The root cause is not confirmed, and the legacy environment still requires rebuild approval.</p></div>
+        </div>
+
+        <p class="label">Proofreading with minimal intervention</p>
+        <div class="comparison">
+          <div><span class="label">Before</span><p>The vendor have confirmed they will provide there response by Friday and we should be able to review it early next week.</p></div>
+          <div><span class="label">After</span><p>The vendor has confirmed that it will respond by Friday. We should be able to review the response early next week.</p></div>
+        </div>
+        <p>Do not restructure a proofreading request into an executive rewrite unless clarity requires it.</p>
+      </section>
+
+      <section>
+        <h2>Try it on your own writing</h2>
+        <p>Copy a prompt and run it against your own draft, or install the skill to apply the standard automatically.</p>
+        <div class="step-actions">
+          <a class="button primary" href="/demo/">See it work</a>
+          <a class="button secondary" href="/install/">Install Clean Language</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
+    <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="/install/">Install</a></div>
+  </footer>
+</body>
+</html>
