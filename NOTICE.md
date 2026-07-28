@@ -15,6 +15,10 @@ Suggested attribution:
 
 > Clean Language by Jeff Posluns, https://cleanlanguage.ai, licensed under CC BY-SA 4.0. Changes were made.
 
+## Related work
+
+Clean Language is developed independently. If you know of another project working toward the same goal, please tell the Clean Language maintainer so the efforts can align and support each other.
+
 ## Adopted governance rules
 
 The Claude Code governance rules under `.claude/rules/governance/` and the AIQT Principle in `.claude/CLAUDE.md` are adopted from Jeff Posluns's `grc_library` project (https://github.com/jposluns/grc_library), licensed under CC BY-SA 4.0. See `.claude/rules/governance/PROVENANCE.md` for details.
