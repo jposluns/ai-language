@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Clean Language</title>
+  <desc id="desc">A geometric CL monogram.</desc>
+
+  <rect width="128" height="128" rx="28" fill="#145c3b"/>
+
+  <!-- C: the retained meaning -->
+  <path
+    d="M91 34C82 27 72 24 61 24C39 24 24 41 24 64C24 87 39 104 61 104C72 104 82 101 91 94"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="15"
+    stroke-linecap="round"
+  />
+
+  <!-- L: the clean final line -->
+  <path
+    d="M60 39V83H94"
+    fill="none"
+    stroke="#e6f0e9"
+    stroke-width="13"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
