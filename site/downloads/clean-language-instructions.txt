@@ -1,6 +1,10 @@
 CLEAN LANGUAGE INSTRUCTIONS
 
-Version 1.0.5
+Version 1.0.6
+
+Author: Jeff Posluns
+Web site: https://cleanlanguage.ai/
+Github: https://github.com/jposluns/ai-language
 
 Use these instructions whenever you draft, rewrite, proofread, adapt, or review prose.
 
