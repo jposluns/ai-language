@@ -140,6 +140,54 @@ unnecessary dashes, and generic AI tone.</code></pre>
       </div>
     </section>
 
+<section class="section ask-ai" id="ask-your-ai">
+  <div class="section-heading" style="text-align: left; margin-bottom: 1.5rem;">
+    <p class="eyebrow">Put us to the test</p>
+    <h2>Don't take our word for it.</h2>
+  </div>
+
+  <!-- Hidden prompt storage for the copy action -->
+  <textarea id="ask-ai-prompt" class="visually-hidden" readonly>Act as a senior software engineer, compiler developer, and natural language processing (NLP) reviewer.
+Please conduct an objective, critical audit of the project "Clean Language AI" using its official site (https://cleanlanguage.ai/) and its GitHub repository (https://github.com/jposluns/ai-language).
+Provide a rigorous evaluation covering the following points:
+
+Core Functionality & Mechanism: What specific problem is this project attempting to solve (e.g., stripping AI-generated prose/fluff, cleaning code context to save tokens, or standardizing language parsing)?
+How does it achieve this under the hood? Does it use deterministic transformations (regex/AST parsing/heuristics) or external model calls?
+
+Edge Cases & Risk of Oversimplification: What are the risks of false positives? (e.g., Does it accidentally remove critical context, break technical terms, strip valid strings/comments, or alter intended meaning)?
+Where is this tool most likely to fail or produce unexpected side effects?
+
+Performance & Efficiency: How lightweight and scalable is the implementation?
+If it runs locally, what is its latency/memory overhead? If it relies on an API, what are the privacy and cost implications?
+
+Alternative Solutions vs. Real Value: How does this approach compare to standard alternatives (e.g., simple regex scripts, existing AST linters, custom system instructions, or dedicated prompt-optimization pipelines)?
+Is this project solving a hard engineering problem, or wrapper-level utility that could be handled by a short script/system prompt?
+
+Ideal vs. Unsuitable Use Cases: Who gets the most real-world value out of using this tool?
+In what workflows or production environments should developers or writers strictly avoid using it?
+
+Do not default to polite praise or marketing copy. Highlight friction points, limitations, maintenance overhead, and engineering trade-offs.</textarea>
+
+  <div class="platform-actions" aria-label="Ask your AI options" style="justify-content: flex-start; margin-left: 0;">
+    <a class="platform-button chatgpt" href="https://chatgpt.com/?hints=search&amp;q=Act%20as%20a%20senior%20software%20engineer%2C%20compiler%20developer%2C%20and%20natural%20language%20processing%20%28NLP%29%20reviewer.%0APlease%20conduct%20an%20objective%2C%20critical%20audit%20of%20the%20project%20%22Clean%20Language%20AI%22%20using%20its%20official%20site%20%28https%3A%2F%2Fcleanlanguage.ai%2F%29%20and%20its%20GitHub%20repository%20%28https%3A%2F%2Fgithub.com%2Fjposluns%2Fai-language%29.%0AProvide%20a%20rigorous%20evaluation%20covering%20the%20following%20points%3A%0A%0ACore%20Functionality%20%26%20Mechanism%3A%20What%20specific%20problem%20is%20this%20project%20attempting%20to%20solve%20%28e.g.%2C%20stripping%20AI-generated%20prose%2Ffluff%2C%20cleaning%20code%20context%20to%20save%20tokens%2C%20or%20standardizing%20language%20parsing%29%3F%0AHow%20does%20it%20achieve%20this%20under%20the%20hood%3F%20Does%20it%20use%20deterministic%20transformations%20%28regex%2FAST%20parsing%2Fheuristics%29%20or%20external%20model%20calls%3F%0A%0AEdge%20Cases%20%26%20Risk%20of%20Oversimplification%3A%20What%20are%20the%20risks%20of%20false%20positives%3F%20%28e.g.%2C%20Does%20it%20accidentally%20remove%20critical%20context%2C%20break%20technical%20terms%2C%20strip%20valid%20strings%2Fcomments%2C%20or%20alter%20intended%20meaning%29%3F%0AWhere%20is%20this%20tool%20most%20likely%20to%20fail%20or%20produce%20unexpected%20side%20effects%3F%0A%0APerformance%20%26%20Efficiency%3A%20How%20lightweight%20and%20scalable%20is%20the%20implementation%3F%0AIf%20it%20runs%20locally%2C%20what%20is%20its%20latency%2Fmemory%20overhead%3F%20If%20it%20relies%20on%20an%20API%2C%20what%20are%20the%20privacy%20and%20cost%20implications%3F%0A%0AAlternative%20Solutions%20vs.%20Real%20Value%3A%20How%20does%20this%20approach%20compare%20to%20standard%20alternatives%20%28e.g.%2C%20simple%20regex%20scripts%2C%20existing%20AST%20linters%2C%20custom%20system%20instructions%2C%20or%20dedicated%20prompt-optimization%20pipelines%29%3F%0AIs%20this%20project%20solving%20a%20hard%20engineering%20problem%2C%20or%20wrapper-level%20utility%20that%20could%20be%20handled%20by%20a%20short%20script%2Fsystem%20prompt%3F%0A%0AIdeal%20vs.%20Unsuitable%20Use%20Cases%3A%20Who%20gets%20the%20most%20real-world%20value%20out%20of%20using%20this%20tool%3F%0AIn%20what%20workflows%20or%20production%20environments%20should%20developers%20or%20writers%20strictly%20avoid%20using%20it%3F%0A%0ADo%20not%20default%20to%20polite%20praise%20or%20marketing%20copy.%20Highlight%20friction%20points%2C%20limitations%2C%20maintenance%20overhead%2C%20and%20engineering%20trade-offs." target="_blank" rel="noopener noreferrer">
+      <span class="platform-icon" aria-hidden="true">🤖</span>
+      <span><strong>Ask ChatGPT</strong><small>Pre-fills prompt in ChatGPT</small></span>
+    </a>
+
+    <a class="platform-button claude" href="https://claude.ai/new?q=Act%20as%20a%20senior%20software%20engineer%2C%20compiler%20developer%2C%20and%20natural%20language%20processing%20%28NLP%29%20reviewer.%0APlease%20conduct%20an%20objective%2C%20critical%20audit%20of%20the%20project%20%22Clean%20Language%20AI%22%20using%20its%20official%20site%20%28https%3A%2F%2Fcleanlanguage.ai%2F%29%20and%20its%20GitHub%20repository%20%28https%3A%2F%2Fgithub.com%2Fjposluns%2Fai-language%29.%0AProvide%20a%20rigorous%20evaluation%20covering%20the%20following%20points%3A%0A%0ACore%20Functionality%20%26%20Mechanism%3A%20What%20specific%20problem%20is%20this%20project%20attempting%20to%20solve%20%28e.g.%2C%20stripping%20AI-generated%20prose%2Ffluff%2C%20cleaning%20code%20context%20to%20save%20tokens%2C%20or%20standardizing%20language%20parsing%29%3F%0AHow%20does%20it%20achieve%20this%20under%20the%20hood%3F%20Does%20it%20use%20deterministic%20transformations%20%28regex%2FAST%20parsing%2Fheuristics%29%20or%20external%20model%20calls%3F%0A%0AEdge%20Cases%20%26%20Risk%20of%20Oversimplification%3A%20What%20are%20the%20risks%20of%20false%20positives%3F%20%28e.g.%2C%20Does%20it%20accidentally%20remove%20critical%20context%2C%20break%20technical%20terms%2C%20strip%20valid%20strings%2Fcomments%2C%20or%20alter%20intended%20meaning%29%3F%0AWhere%20is%20this%20tool%20most%20likely%20to%20fail%20or%20produce%20unexpected%20side%20effects%3F%0A%0APerformance%20%26%20Efficiency%3A%20How%20lightweight%20and%20scalable%20is%20the%20implementation%3F%0AIf%20it%20runs%20locally%2C%20what%20is%20its%20latency%2Fmemory%20overhead%3F%20If%20it%20relies%20on%20an%20API%2C%20what%20are%20the%20privacy%20and%20cost%20implications%3F%0A%0AAlternative%20Solutions%20vs.%20Real%20Value%3A%20How%20does%20this%20approach%20compare%20to%20standard%20alternatives%20%28e.g.%2C%20simple%20regex%20scripts%2C%20existing%20AST%20linters%2C%20custom%20system%20instructions%2C%20or%20dedicated%20prompt-optimization%20pipelines%29%3F%0AIs%20this%20project%20solving%20a%20hard%20engineering%20problem%2C%20or%20wrapper-level%20utility%20that%20could%20be%20handled%20by%20a%20short%20script%2Fsystem%20prompt%3F%0A%0AIdeal%20vs.%20Unsuitable%20Use%20Cases%3A%20Who%20gets%20the%20most%20real-world%20value%20out%20of%20using%20this%20tool%3F%0AIn%20what%20workflows%20or%20production%20environments%20should%20developers%20or%20writers%20strictly%20avoid%20using%20it%3F%0A%0ADo%20not%20default%20to%20polite%20praise%20or%20marketing%20copy.%20Highlight%20friction%20points%2C%20limitations%2C%20maintenance%20overhead%2C%20and%20engineering%20trade-offs." target="_blank" rel="noopener noreferrer">
+      <span class="platform-icon" aria-hidden="true">C</span>
+      <span><strong>Ask Claude</strong><small>Pre-fills prompt in Claude</small></span>
+    </a>
+
+    <button type="button" class="platform-button secondary" data-copy-target="ask-ai-prompt" style="cursor: pointer; text-align: left;">
+      <span class="platform-icon" aria-hidden="true">📋</span>
+      <span><strong>Copy Prompt</strong><small>For Gemini, Copilot, or others</small></span>
+    </button>
+  </div>
+
+  <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+</section>
+
     <section class="section faq">
       <div class="section-heading"><p class="eyebrow">Questions</p><h2>What Clean Language is for.</h2></div>
       <details><summary>Is Clean Language an AI humanizer?</summary><p>Clean Language makes generated text more natural by improving the writing itself. It preserves correctness and does not target AI-detector scores.</p></details>
@@ -161,5 +209,6 @@ unnecessary dashes, and generic AI tone.</code></pre>
     <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
     <div><a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a><a href="/patterns/">AI writing patterns</a><a href="/install/">Install</a></div>
   </footer>
+  <script src="/js/copy.js" defer></script>
 </body>
 </html>
