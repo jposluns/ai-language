@@ -33,14 +33,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          version="$(sed -n 's/^version:[[:space:]]*//p' clean-language/SKILL.md | head -1)"
+          version="$(sed -n 's/^Version:[[:space:]]*\([0-9][0-9.]*\).*/\1/p' clean-language/SKILL.md | head -1)"
           if [ -z "${version}" ]; then
-            echo "No version found in the clean-language/SKILL.md frontmatter." >&2
+            echo "No 'Version:' line found in the clean-language/SKILL.md body." >&2
             exit 1
           fi
           if [ "v${version}" != "${RELEASE_TAG}" ]; then
             echo "SKILL.md version (${version}) does not match the release tag (${RELEASE_TAG})." >&2
-            echo "Set the version line in clean-language/SKILL.md to match the tag, or cut the matching tag." >&2
+            echo "Set the Version line in clean-language/SKILL.md to match the tag, or cut the matching tag." >&2
             exit 1
           fi
           echo "VERSION=${version}" >> "${GITHUB_ENV}"
