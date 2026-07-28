@@ -64,6 +64,26 @@ I wanted to reach out to see if we could align on the warehouse project: the own
 
 Please confirm the warehouse project's owner, critical path, unresolved dependencies, and recovery plan by 3:00 p.m. Thursday.
 
+## Replace executive template phrasing
+
+### Weak
+
+The agenda looks highly relevant to my work, particularly the sessions on regulatory interoperability, cyber resilience, and audit readiness.
+
+### Preferred
+
+The agenda covers three areas I work on: regulatory interoperability, cyber resilience, and audit readiness.
+
+Keep the same topics and state the writer's connection to them, rather than asserting relevance with an intensifier.
+
+### Abstract-noun frame
+
+My main areas of interest are AI governance and cybersecurity.
+
+### Preferred, as a direct statement
+
+I am interested in AI governance and cybersecurity.
+
 ## Incident status
 
 ### Weak
