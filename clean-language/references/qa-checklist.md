@@ -14,6 +14,7 @@ Review finished prose against these questions.
 - Does the first sentence contain the answer, decision, finding, request, or purpose?
 - Can any introductory sentence be removed without loss?
 - Is the required action explicit?
+- Is an intensifier or connector such as "highly relevant" or "aligns closely with" standing in for a direct statement?
 
 ## Ownership and consequence
 
@@ -26,12 +27,15 @@ Review finished prose against these questions.
 - Does the cadence vary without becoming theatrical?
 - Are fragments, one-line conclusions, and rhetorical contrasts used sparingly?
 - Does the text sound like a competent person wrote it for this audience?
+- Could a polished phrase here appear unchanged in thousands of executive messages? Make it specific or remove it.
+- Does the message sound like the writer, not a generic executive voice?
 
 ## Density
 
 - Can any word, sentence, paragraph, heading, or repetition be removed?
 - Are bullets or tables being used because they improve comprehension rather than because they are conventional?
 - Does each paragraph do one identifiable job?
+- Does each topic list connect to a decision, question, or request, rather than only cataloguing subjects?
 
 ## Tone
 

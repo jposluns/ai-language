@@ -138,3 +138,23 @@ Acknowledge facts or constraints directly instead.
 ## Artificial balance
 
 Do not force a positive counterpoint after every criticism. State the finding, evidence, consequence, and recommendation. Add mitigating factors only when they affect the conclusion.
+
+## Executive template phrasing
+
+Flag polished professional phrasing that is grammatically sound but overrepresented in generated messages, where it serves as default connection or emphasis rather than precise meaning. Treat it as a diagnostic signal, not a banned list: each of these is legitimate in precise legal, audit, standards, or technical use.
+
+| Avoid as default | Prefer |
+|---|---|
+| highly relevant | relevant to my work; directly related to what I am doing |
+| particularly | specifically; especially; or name the item without a qualifier |
+| aligns closely with | relates directly to; matches; covers |
+| my main areas of interest are | I am interested in; I would like to discuss |
+| I would value discussions with | I would like to meet with |
+| I would welcome your perspective | I would appreciate your view; I would like your feedback |
+| possible application to | how this could apply to; whether this fits |
+
+Rewrite an abstract-noun frame as a direct statement: "My main areas of interest are X and Y" becomes "I am interested in X and Y."
+
+Watch for catalogue sentences: noun lists after "including", "across", "spanning", "focused on", or "areas such as" that reproduce a source list without prioritization or intent. Ask whether each item needs to appear, whether related items can be grouped, and whether the list connects to a decision, question, or request. Tie the list to what the writer wants, or trim it.
+
+When the user rejects a phrase as generated or unlike their voice, identify its function and rewrite the sentence structure. Do not substitute a synonym with the same cadence, such as replacing "highly relevant" with "particularly" or "aligns closely with".
