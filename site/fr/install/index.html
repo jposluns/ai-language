@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Installer Clean Language dans Claude, ChatGPT, Gemini et d'autres outils IA</title>
+  <meta name="description" content="Instructions simples, étape par étape, pour installer Clean Language dans Claude, ChatGPT, Gemini, Copilot et d'autres outils IA. Aucune ligne de commande, programmation ou expérience GitHub requise.">
+  <link rel="canonical" href="https://cleanlanguage.ai/fr/install/">
+  <link rel="alternate" hreflang="en" href="https://cleanlanguage.ai/install/">
+  <link rel="alternate" hreflang="fr" href="https://cleanlanguage.ai/fr/install/">
+  <link rel="alternate" hreflang="x-default" href="https://cleanlanguage.ai/install/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#145c3b">
+  <link rel="stylesheet" href="/styles.css?v=20260727-4">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Installer Clean Language sans connaissances techniques">
+  <meta property="og:description" content="Configuration étape par étape pour les Skills Claude, les Skills ChatGPT, les Gems Gemini, les agents Copilot et d'autres systèmes IA.">
+  <meta property="og:url" content="https://cleanlanguage.ai/fr/install/">
+  <meta property="og:image" content="https://cleanlanguage.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clean Language, un standard éditorial gratuit et multiplateforme pour l'écriture générée par l'IA.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Installer Clean Language sans connaissances techniques">
+  <meta name="twitter:description" content="Configuration étape par étape pour les Skills Claude, les Skills ChatGPT, les Gems Gemini, les agents Copilot et d'autres systèmes IA.">
+  <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/fr/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="/fr/" class="nav-collapse">Accueil</a>
+      <a href="/fr/patterns/">Tics d'écriture IA</a>
+      <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="/install/" class="lang-switch" hreflang="en" lang="en">EN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Installation simple</p>
+      <h1>Choisissez votre IA et suivez les boutons.</h1>
+      <p>Vous n'avez besoin ni d'une ligne de commande, ni d'un compte développeur, ni de connaissances sur GitHub. Ces instructions couvrent Claude, ChatGPT, Gemini, Copilot et d'autres systèmes IA.</p>
+    </section>
+
+    <article class="content">
+      <div class="platform-actions" aria-label="Options d'installation">
+        <a class="platform-button claude" href="#claude"><span class="platform-icon" aria-hidden="true">C</span><span><strong>Configuration Claude</strong><small>Télécharger, téléverser et activer le Skill</small></span></a>
+        <a class="platform-button chatgpt" href="#chatgpt"><span class="platform-icon" aria-hidden="true">G</span><span><strong>Instructions ChatGPT</strong><small>Configurer via les Skills de ChatGPT</small></span></a>
+        <a class="platform-button gemini" href="#gemini"><span class="platform-icon" aria-hidden="true">✦</span><span><strong>Instructions Gemini</strong><small>Créer un Gem Clean Language réutilisable</small></span></a>
+        <a class="platform-button copilot" href="#copilot"><span class="platform-icon" aria-hidden="true">Co</span><span><strong>Instructions Copilot</strong><small>Créer un agent Clean Language</small></span></a>
+        <a class="platform-button guide" href="#other-ai"><span class="platform-icon" aria-hidden="true">+</span><span><strong>Autres systèmes IA</strong><small>Utiliser le fichier d'instructions portable</small></span></a>
+        <a class="platform-button source" href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer"><span class="platform-icon" aria-hidden="true">&lt;/&gt;</span><span><strong>Voir le code source sur GitHub</strong><small>Consulter chaque règle et chaque version</small></span></a>
+      </div>
+
+      <section id="claude">
+        <h2>Site web Claude ou Claude Desktop</h2>
+        <p class="verified">Dernière vérification le 27 juillet 2026.</p>
+        <p><strong>C'est la méthode recommandée pour Claude.</strong> Elle installe le Skill complet, de sorte que Claude utilise les instructions et fichiers de référence canoniques dans chaque conversation plutôt que dans un seul projet.</p>
+
+        <div class="notice">
+          <p><strong>D'abord, activez l'exécution de code. La section Skills n'apparaît pas sans cela.</strong></p>
+          <p>Sur les forfaits Free, Pro et Max, ouvrez <a href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener noreferrer">Paramètres, puis Capacités</a> et activez <strong>Exécution de code et création de fichiers</strong>. Si la section Skills manque encore par la suite, ce paramètre en est la cause.</p>
+          <p>Installez depuis un <strong>navigateur de bureau</strong>. Les applications mobiles ne sont pas documentées comme prenant en charge le téléversement de Skills.</p>
+        </div>
+
+        <h3>Étape 1 : télécharger le Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="/claude/download">Télécharger clean-language.zip</a>
+          <a class="button secondary" href="/fr/verify/">Comment vérifier ce téléchargement (facultatif)</a>
+        </div>
+        <p>Votre navigateur enregistre un fichier nommé <code>clean-language.zip</code>. Ne le décompressez pas. Le Skill n'est que des instructions en prose et du matériel de référence. Il ne contient aucun code exécutable et n'effectue aucun appel réseau.</p>
+
+        <h3>Étape 2 : le téléverser dans Claude</h3>
+        <div class="step-actions">
+          <a class="button primary" href="https://claude.ai/customize/skills" target="_blank" rel="noopener noreferrer">Ouvrir les Skills de Claude</a>
+        </div>
+        <p>Sur la page Skills :</p>
+        <ol>
+          <li>Cliquez sur le bouton <strong>+</strong>, puis <strong>+ Créer un Skill</strong>.</li>
+          <li>Cliquez sur <strong>Téléverser un Skill</strong>.</li>
+          <li>Sélectionnez le fichier <code>clean-language.zip</code> téléchargé.</li>
+          <li>Assurez-vous que <strong>Clean Language</strong> est activé dans votre liste de Skills.</li>
+        </ol>
+
+        <p>Testez-le dans une nouvelle conversation. Copiez cette invite, collez-la, puis ajoutez votre texte :</p>
+        <div class="step-actions">
+          <code id="claude-test-prompt">Applique Clean Language à ce brouillon :</code>
+          <button type="button" class="button secondary" data-copy-target="claude-test-prompt">Copier l'invite</button>
+          <span class="visually-hidden" role="status" aria-live="polite" id="copy-status"></span>
+        </div>
+
+        <div class="notice"><strong>Team ou Enterprise :</strong> un propriétaire d'organisation doit activer à la fois <strong>Exécution de code et création de fichiers</strong> et <strong>Skills</strong> dans <a href="https://claude.ai/admin-settings/skills" target="_blank" rel="noopener noreferrer">Paramètres de l'organisation, puis Skills</a>. Un propriétaire peut téléverser Clean Language une seule fois pour le provisionner pour toute l'organisation, après quoi il apparaît automatiquement pour chaque membre, qui n'a pas à le téléverser individuellement.</div>
+
+        <details>
+          <summary><strong>Solution de repli : utiliser un projet Claude à la place</strong></summary>
+          <p>N'utilisez ceci que si votre organisation a désactivé les Skills ou l'exécution de code. Cela s'applique à un seul projet plutôt qu'à chaque conversation.</p>
+          <ol>
+            <li>
+              <div class="step-actions">
+                <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Télécharger les instructions</a>
+                <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">Voir l'original sur GitHub</a>
+              </div>
+            </li>
+            <li>Dans Claude, cliquez sur <strong>Projets</strong>, puis <strong>Nouveau projet</strong>.</li>
+            <li>Nommez-le <strong>Clean Language</strong>.</li>
+            <li>Sous <strong>Connaissances du projet</strong>, cliquez sur <strong>+</strong> et téléversez le fichier enregistré.</li>
+            <li>Réglez les instructions du projet à : <code>Utilise les instructions Clean Language dans les connaissances du projet pour chaque réponse, sauf si je te dis explicitement le contraire.</code></li>
+          </ol>
+        </details>
+      </section>
+
+      <section id="chatgpt">
+        <h2>ChatGPT</h2>
+        <p class="verified">Dernière vérification le 27 juillet 2026.</p>
+        <p>ChatGPT peut utiliser le même Skill packagé que Claude. Téléversez-le une fois, et ChatGPT applique Clean Language lorsque votre demande correspond.</p>
+
+        <h3>Étape 1 : télécharger le Skill</h3>
+        <div class="step-actions">
+          <a class="button primary" href="/download">Télécharger clean-language.zip</a>
+          <a class="button secondary" href="/fr/verify/">Comment vérifier ce téléchargement (facultatif)</a>
+        </div>
+        <p>Votre navigateur enregistre un fichier nommé <code>clean-language.zip</code>. Ne le décompressez pas. Le Skill n'est que des instructions en prose et du matériel de référence. Il ne contient aucun code exécutable et n'effectue aucun appel réseau.</p>
+
+        <h3>Étape 2 : le téléverser dans ChatGPT</h3>
+        <ol>
+          <li>Ouvrez <strong>Plugins</strong> dans la barre latérale de ChatGPT, puis ouvrez <strong>Skills</strong>.</li>
+          <li>Cliquez sur <strong>Créer</strong>, puis <strong>Téléverser depuis votre ordinateur</strong>.</li>
+          <li>Sélectionnez le fichier <code>clean-language.zip</code> téléchargé.</li>
+          <li>Passez le Skill en revue, puis installez-le.</li>
+        </ol>
+        <p>Testez-le dans une nouvelle conversation : <code>Applique Clean Language à ce message : [collez votre texte]</code></p>
+        <div class="notice"><strong>Comptes Workspace :</strong> votre administrateur devra peut-être autoriser les membres à utiliser et téléverser des Skills.</div>
+
+        <details>
+          <summary><strong>Solution de repli : construire le Skill à partir du fichier d'instructions</strong></summary>
+          <p>Utilisez ceci si votre compte ne peut pas téléverser de Skill.</p>
+          <ol>
+            <li>
+              <div class="step-actions">
+                <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Télécharger les instructions</a>
+                <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">Voir l'original sur GitHub</a>
+              </div>
+              Le fichier s'enregistre sous <code>clean-language-instructions.txt</code>.
+            </li>
+            <li>Ouvrez ChatGPT, ouvrez <strong>Plugins</strong>, puis <strong>Skills</strong>.</li>
+            <li>Cliquez sur <strong>Créer</strong>, puis <strong>Créer par conversation</strong>.</li>
+            <li>Tapez : <code>Crée un Skill nommé Clean Language en utilisant les instructions du fichier que je vais téléverser.</code></li>
+            <li>Joignez <code>clean-language-instructions.txt</code> et envoyez le message.</li>
+            <li>Lorsque ChatGPT affiche le Skill terminé, installez-le.</li>
+          </ol>
+          <p>Si vous ne voyez pas Skills, joignez le fichier d'instructions à une conversation normale et dites : <code>Suis ces règles d'écriture pour cette conversation.</code></p>
+        </details>
+      </section>
+
+      <section id="gemini">
+        <h2>Site web Gemini ou application Gemini</h2>
+        <p class="verified">Dernière vérification le 27 juillet 2026.</p>
+        <p>La méthode réutilisable la plus simple est un Gem personnalisé. Créez-le une fois sur le site web Gemini, puis utilisez-le depuis le site, l'application mobile, ou le panneau latéral Google Workspace pris en charge.</p>
+        <ol>
+          <li>
+            <div class="step-actions">
+              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Télécharger les instructions</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">Voir l'original sur GitHub</a>
+            </div>
+            Le fichier s'enregistre sous <code>clean-language-instructions.txt</code>.
+          </li>
+          <li>Sur un ordinateur, ouvrez <strong>gemini.google.com</strong>.</li>
+          <li>Ouvrez le menu à gauche.</li>
+          <li>Cliquez sur <strong>Gems</strong>. Si vous ne le voyez pas, cliquez sur <strong>Paramètres et aide</strong>, puis <strong>Gems</strong>.</li>
+          <li>Cliquez sur <strong>Nouveau Gem</strong>.</li>
+          <li>Nommez-le <strong>Clean Language</strong>.</li>
+          <li>Dans la zone d'instructions, tapez : <code>Suis les instructions Clean Language du fichier de connaissances joint pour chaque réponse.</code></li>
+          <li>Faites défiler jusqu'à <strong>Connaissances</strong>.</li>
+          <li>Cliquez sur <strong>Ajouter des fichiers</strong>, puis <strong>Téléverser des fichiers</strong>.</li>
+          <li>Sélectionnez <code>clean-language-instructions.txt</code>.</li>
+          <li>Cliquez sur <strong>Enregistrer</strong>.</li>
+        </ol>
+        <p>Pour l'utiliser plus tard, ouvrez Gemini, cliquez sur <strong>Gems</strong>, puis cliquez sur <strong>Clean Language</strong>.</p>
+        <div class="notice"><strong>Remarque mobile :</strong> créez et modifiez le Gem sur le site web Gemini. Une fois enregistré, le Gem apparaît dans l'application mobile Gemini.</div>
+      </section>
+
+      <section id="copilot">
+        <h2>Copilot</h2>
+        <p class="verified">Dernière vérification le 27 juillet 2026.</p>
+        <p>La méthode réutilisable est un agent Copilot. Créez-le une fois avec Agent Builder, puis sélectionnez-le chaque fois que vous écrivez. Créer un agent avec un fichier de connaissances téléversé nécessite une licence Microsoft 365 Copilot.</p>
+        <ol>
+          <li>
+            <div class="step-actions">
+              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Télécharger les instructions</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">Voir l'original sur GitHub</a>
+            </div>
+            Le fichier s'enregistre sous <code>clean-language-instructions.txt</code>.
+          </li>
+          <li>Ouvrez Microsoft 365 Copilot sur un ordinateur.</li>
+          <li>Ouvrez le panneau des agents et cliquez sur <strong>Nouvel agent</strong>, puis ouvrez l'onglet <strong>Configurer</strong>.</li>
+          <li>Nommez-le <strong>Clean Language</strong>.</li>
+          <li>Dans la zone d'instructions, entrez : <code>Suis les instructions Clean Language du fichier de connaissances téléversé pour chaque réponse.</code></li>
+          <li>Sous <strong>Connaissances</strong>, téléversez <code>clean-language-instructions.txt</code> depuis votre appareil.</li>
+          <li>Cliquez sur <strong>Créer</strong> ou <strong>Enregistrer</strong>, puis sélectionnez <strong>Clean Language</strong> chaque fois que vous en avez besoin.</li>
+        </ol>
+        <div class="notice"><strong>Pas d'accès aux agents ?</strong> Collez le contenu de <code>clean-language-instructions.txt</code> dans une conversation Copilot et dites : <code>Suis ces règles d'écriture pour cette conversation.</code></div>
+      </section>
+
+      <section id="other-ai">
+        <h2>Autres systèmes IA</h2>
+        <p>Clean Language fonctionne aussi avec les modèles locaux, les assistants basés sur une API, et les autres systèmes qui acceptent des instructions personnalisées, des invites système, des connaissances réutilisables, ou des fichiers téléversés.</p>
+        <ol>
+          <li>
+            <div class="step-actions">
+              <a class="button primary" href="/downloads/clean-language-instructions.txt" download>Télécharger les instructions</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/blob/main/site/downloads/clean-language-instructions.txt" target="_blank" rel="noopener noreferrer">Voir l'original sur GitHub</a>
+            </div>
+          </li>
+          <li>Enregistrez le fichier ou copiez son contenu.</li>
+          <li>Ajoutez-le à votre outil IA comme instructions personnalisées, connaissances de projet, invite système, ou fichier de référence joint.</li>
+          <li>Dites à l'IA : <code>Utilise les instructions Clean Language pour chaque réponse, sauf si je te dis explicitement le contraire.</code></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Comment utiliser Clean Language</h2>
+        <p>Vous pouvez coller des notes brutes ou un texte fini. Utilisez l'une de ces demandes :</p>
+        <pre><code>Réécris ceci avec Clean Language :
+[coller le texte]</code></pre>
+        <pre><code>Relis ceci avec Clean Language.
+Corrige les erreurs mais ne change pas mon ton :
+[coller le texte]</code></pre>
+        <pre><code>Audite ceci pour repérer le langage IA robotique,
+le remplissage, les effets de contraste et l'abus de tirets.
+Ne le réécris pas :
+[coller le texte]</code></pre>
+        <pre><code>Écris ceci sans tirets longs ni tirets courts :
+[coller les notes]</code></pre>
+      </section>
+
+      <section>
+        <h2>Pour les utilisateurs techniques</h2>
+        <p>Les développeurs peuvent installer le Skill Agent complet depuis le <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">dépôt GitHub</a> pour ChatGPT, Claude Code, Gemini CLI, et les clients Agent Skills compatibles.</p>
+      </section>
+
+      <section id="assurance">
+        <h2>Confiance et assurance</h2>
+        <ul>
+          <li>Le Skill ne contient aucun code exécutable et n'effectue aucun appel réseau.</li>
+          <li>Chaque règle et fichier de référence est vérifiable publiquement dans le <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">dépôt GitHub</a>.</li>
+          <li>Chaque version étiquetée fournit une somme de contrôle SHA-256, afin de vérifier le téléchargement.</li>
+          <li>Clean Language est sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</li>
+          <li>Clean Language est le même ensemble d'instructions sur chaque plateforme, mais chaque fournisseur contrôle la façon dont son modèle les applique, donc les résultats varient d'une plateforme à l'autre.</li>
+          <li>Un modèle peut tout de même changer le sens même avec ces règles en place, alors lisez le résultat avant de vous y fier.</li>
+          <li>Pour un texte juridique, médical, financier, lié à la sécurité, ou à enjeu élevé, faites réviser toute modification par une personne qualifiée.</li>
+          <li>Qu'une plateforme applique le Skill automatiquement ou seulement lorsque vous le demandez varie selon la plateforme et le compte.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language est offert gratuitement sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, créé par <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
+    <div><a href="/fr/">Accueil</a><a href="/fr/patterns/">Tics d'écriture IA</a><a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+  </footer>
+  <script src="/js/copy.js" defer></script>
+</body>
+</html>

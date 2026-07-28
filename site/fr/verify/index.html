@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vérifier votre téléchargement | Clean Language</title>
+  <meta name="description" content="Étapes facultatives pour confirmer que le téléchargement de Clean Language correspond à sa somme de contrôle SHA-256 publiée. Si vous faites confiance à la source, vous pouvez ignorer cette étape.">
+  <link rel="canonical" href="https://cleanlanguage.ai/fr/verify/">
+  <link rel="alternate" hreflang="en" href="https://cleanlanguage.ai/verify/">
+  <link rel="alternate" hreflang="fr" href="https://cleanlanguage.ai/fr/verify/">
+  <link rel="alternate" hreflang="x-default" href="https://cleanlanguage.ai/verify/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#145c3b">
+  <link rel="stylesheet" href="/styles.css?v=20260727-4">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Vérifier votre téléchargement de Clean Language">
+  <meta property="og:description" content="Étapes facultatives pour confirmer que le téléchargement correspond à sa somme de contrôle SHA-256 publiée.">
+  <meta property="og:url" content="https://cleanlanguage.ai/fr/verify/">
+  <meta property="og:image" content="https://cleanlanguage.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clean Language, un standard éditorial gratuit et multiplateforme pour l'écriture générée par l'IA.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vérifier votre téléchargement de Clean Language">
+  <meta name="twitter:description" content="Étapes facultatives pour confirmer que le téléchargement correspond à sa somme de contrôle SHA-256 publiée.">
+  <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/fr/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="/fr/" class="nav-collapse">Accueil</a>
+      <a href="/fr/patterns/">Tics d'écriture IA</a>
+      <a href="/fr/install/">Installer</a>
+      <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="/verify/" class="lang-switch" hreflang="en" lang="en">EN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Facultatif</p>
+      <h1>Vérifiez votre téléchargement.</h1>
+      <p>Cette étape est facultative. Si vous faites confiance à la source, soit la version officielle de Clean Language sur GitHub, installez le Skill sans rien vérifier. La vérification existe pour les personnes qui veulent confirmer, pour leur propre tranquillité d'esprit, que le fichier est arrivé exactement tel que publié.</p>
+    </section>
+
+    <article class="content">
+      <section>
+        <h2>Devez-vous faire cela ?</h2>
+        <p>Non. Le téléchargement fonctionne de la même façon dans les deux cas. La vérification ajoute de la confiance pour les personnes soucieuses de sécurité, et pour quiconque se trouve sur un réseau non fiable et veut écarter un fichier corrompu ou modifié. Si ce n'est pas une préoccupation pour vous, ignorez cette étape et suivez le <a href="/fr/install/">guide d'installation</a>.</p>
+      </section>
+
+      <section>
+        <h2>Qu'est-ce qu'une somme de contrôle</h2>
+        <p>Une somme de contrôle SHA-256 est une courte empreinte d'un fichier. Le même fichier produit toujours la même empreinte, et changer ne serait-ce qu'un seul octet en produit une différente. Chaque version de Clean Language publie la somme de contrôle de <code>clean-language.zip</code>. Si la somme de contrôle que vous calculez pour votre copie correspond à la valeur publiée, votre téléchargement est identique à la version publiée et vous est parvenu intact.</p>
+      </section>
+
+      <section>
+        <h2>Comment vérifier</h2>
+        <ol>
+          <li>Téléchargez le Skill et sa somme de contrôle publiée.
+            <div class="step-actions">
+              <a class="button primary" href="/download">Télécharger clean-language.zip</a>
+              <a class="button secondary" href="https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256" target="_blank" rel="noopener noreferrer">Somme de contrôle publiée</a>
+            </div>
+          </li>
+          <li>Calculez la somme de contrôle du fichier téléchargé. Ouvrez un terminal dans le dossier contenant <code>clean-language.zip</code> et exécutez la commande pour votre système.
+            <p class="label">Windows (PowerShell)</p>
+            <pre><code>Get-FileHash clean-language.zip -Algorithm SHA256</code></pre>
+            <p class="label">macOS</p>
+            <pre><code>shasum -a 256 clean-language.zip</code></pre>
+            <p class="label">Linux</p>
+            <pre><code>sha256sum clean-language.zip</code></pre>
+          </li>
+          <li>Comparez la valeur affichée par votre ordinateur avec celle de <code>clean-language.zip.sha256</code>. Une correspondance signifie que le téléchargement est authentique. En cas de différence, supprimez le fichier, téléchargez-le à nouveau, et vérifiez une seconde fois.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Pourquoi il est sûr d'ignorer cette étape</h2>
+        <p>Le Skill n'est que des instructions en prose et du matériel de référence. Il ne contient aucun code exécutable, n'effectue aucun appel réseau, et chaque fichier est vérifiable publiquement dans le <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">dépôt GitHub</a>. La somme de contrôle confirme que le fichier est arrivé intact. Le Skill est sûr à utiliser, que vous le vérifiiez ou non.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language est offert gratuitement sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, créé par <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
+    <div><a href="/fr/">Accueil</a><a href="/fr/install/">Installer</a><a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+  </footer>
+</body>
+</html>
