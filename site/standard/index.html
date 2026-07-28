@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Clean Language Standard | Overview</title>
+  <meta name="description" content="An overview of the Clean Language standard: the precedence order, operating modes, core style, what it removes, and what it preserves. This is the guidance the skill uses.">
+  <link rel="canonical" href="https://cleanlanguage.ai/standard/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#145c3b">
+  <link rel="stylesheet" href="/styles.css?v=20260728-1">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Clean Language standard">
+  <meta property="og:description" content="The precedence order, operating modes, core style, and what the standard removes and preserves.">
+  <meta property="og:url" content="https://cleanlanguage.ai/standard/">
+  <meta property="og:image" content="https://cleanlanguage.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Clean Language, a free cross-platform editorial standard for AI writing.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Clean Language standard">
+  <meta name="twitter:description" content="The precedence order, operating modes, core style, and what the standard removes and preserves.">
+  <meta name="twitter:image" content="https://cleanlanguage.ai/og-image.png">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">CL</span><span>Clean Language</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="/" class="nav-collapse">Home</a>
+      <details class="nav-menu">
+        <summary>The standard</summary>
+        <div class="nav-menu-panel">
+          <a href="/standard/">Overview</a>
+          <a href="/patterns/">AI patterns</a>
+          <a href="/examples/">Before and after</a>
+          <a href="/channels/">By channel</a>
+          <a href="/checklist/">Checklist</a>
+        </div>
+      </details>
+      <a href="/demo/">See it work</a>
+      <a href="/install/">Install</a>
+      <a href="https://github.com/jposluns/ai-language" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">The standard</p>
+      <h1>What Clean Language actually says.</h1>
+      <p>Clean Language produces writing that reads as deliberate, technically competent, and written by a capable practitioner rather than generated from a generic communications template. These pages are the standard itself. You do not need to read them to use the skill, but they are here if you want to see exactly how it works.</p>
+    </section>
+
+    <article class="content">
+      <div class="notice"><p><strong>This is the actual guidance the skill uses.</strong> This page mirrors the skill's entry point. Read the exact source, <code>SKILL.md</code>, on <a href="https://github.com/jposluns/ai-language/blob/main/clean-language/SKILL.md" target="_blank" rel="noopener noreferrer">GitHub</a>.</p></div>
+
+      <section>
+        <h2>The precedence order</h2>
+        <p>When rules compete, the earlier rule wins. Style never overrides meaning.</p>
+        <ol>
+          <li>Preserve factual, technical, legal, contractual, policy, and semantic accuracy.</li>
+          <li>Preserve the user's explicit audience, purpose, tone, length, and format constraints.</li>
+          <li>Preserve names, dates, figures, commitments, qualifications, and domain terminology.</li>
+          <li>Improve organization, clarity, directness, density, and natural cadence.</li>
+          <li>Remove generic AI-writing patterns only when doing so does not conflict with rules 1 through 4.</li>
+        </ol>
+        <p>Never sacrifice correctness to satisfy a stylistic heuristic.</p>
+      </section>
+
+      <section>
+        <h2>Operating modes</h2>
+        <div class="pattern-list">
+          <div class="pattern-item"><strong>Draft</strong><span>Create finished prose from notes or an objective.</span></div>
+          <div class="pattern-item"><strong>Rewrite</strong><span>Replace supplied prose while preserving meaning and material details.</span></div>
+          <div class="pattern-item"><strong>Proofread</strong><span>Correct grammar, spelling, punctuation, and obvious ambiguity with minimal stylistic change.</span></div>
+          <div class="pattern-item"><strong>Audit</strong><span>Identify language defects and explain recommended changes without rewriting unless requested.</span></div>
+          <div class="pattern-item"><strong>Adapt</strong><span>Rework the same content for a different audience, channel, formality level, or length.</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>The core style</h2>
+        <ul>
+          <li>Lead with the answer, decision, request, finding, or action.</li>
+          <li>Write concise, information-dense prose.</li>
+          <li>Prefer a direct subject and verb to an abstract-noun frame: write "I am interested in X", not "My main areas of interest are X".</li>
+          <li>Use clear headings, bullets, and tables only when they improve comprehension.</li>
+          <li>Use Oxford English and -ize spellings where both forms are valid, and the Oxford comma where it prevents ambiguity.</li>
+          <li>Use active voice when ownership or accountability matters, and passive voice when the actor is unknown, immaterial, confidential, or less important than the affected object.</li>
+          <li>Distinguish verified facts, reasonable inferences, estimates, and speculation, and state uncertainty directly.</li>
+          <li>Preserve the writer's natural bluntness when it remains professionally appropriate; when they supply a draft or a correction, keep their voice rather than a generic executive register.</li>
+          <li>Do not add praise, reassurance, or filler, and do not end with an optional offer or generic engagement prompt.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What it removes</h2>
+        <p>Generic AI-writing patterns, treated as diagnostic signals rather than unconditional bans:</p>
+        <ul>
+          <li>throat-clearing before the substantive point;</li>
+          <li>vague declarations of importance;</li>
+          <li>formulaic negative-to-positive contrasts;</li>
+          <li>manufactured punch lines and dramatic fragments;</li>
+          <li>repetitive three-part rhetorical structures used without substantive need;</li>
+          <li>meta-commentary about what the document will do;</li>
+          <li>empty intensifiers, softeners, and business jargon;</li>
+          <li>formulaic executive phrasing used as default connection or emphasis, and catalogue-style topic lists;</li>
+          <li>excessive em dashes;</li>
+          <li>abstract claims that conceal the actor, evidence, consequence, or required action.</li>
+        </ul>
+        <p>The full catalogue, with examples, is on the <a href="/patterns/">AI patterns</a> page.</p>
+      </section>
+
+      <section>
+        <h2>What it preserves</h2>
+        <p>Clean Language does not mechanically delete language that carries meaning:</p>
+        <ul>
+          <li>adverbs that convey method, timing, scope, legal effect, technical behaviour, or operational significance;</li>
+          <li>passive constructions required by legal, audit, incident, scientific, or standards writing;</li>
+          <li>three-item lists that accurately represent three distinct items;</li>
+          <li>absolute terms such as must, never, always, or prohibited when they express a verified requirement or invariant;</li>
+          <li>technical subjects that genuinely perform actions, such as a firewall blocking traffic;</li>
+          <li>domain-specific jargon that the intended audience uses precisely;</li>
+          <li>quoted language, official titles, product names, standards text, or contractual wording;</li>
+          <li>the separator in a numeric or date range: an en dash becomes a hyphen or the word "to" (12-14, or 12 to 14), never deleted or merged.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Match the context</h2>
+        <p>The standard adapts to the channel and document type, from executive communication to incident reports, email, and governance material. See the <a href="/channels/">By channel</a> page for the specific rules.</p>
+      </section>
+
+      <section>
+        <h2>Check the result</h2>
+        <p>Before finished prose is delivered, it is checked against the quality criteria. See the <a href="/checklist/">Checklist</a>, and the <a href="/examples/">before-and-after examples</a> for the degree of intervention.</p>
+        <a class="button primary" href="/install/">Install Clean Language</a>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>Clean Language is freely available under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>, created by <a href="https://linkedin.com/in/jposluns" target="_blank" rel="noopener noreferrer">Jeff Posluns</a>.</p>
+    <div><a href="/">Home</a><a href="/patterns/">AI writing patterns</a><a href="/install/">Install</a></div>
+  </footer>
+</body>
+</html>
