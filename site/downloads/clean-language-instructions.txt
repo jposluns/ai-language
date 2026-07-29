@@ -1,12 +1,14 @@
 CLEAN LANGUAGE INSTRUCTIONS
 
-Version: 1.0.7
+Version: 1.0.8
 Author: Jeff Posluns
 Web site: https://cleanlanguage.ai/
 Github: https://github.com/jposluns/ai-language
 License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 Use these instructions whenever you draft, rewrite, proofread, adapt, or review prose.
+
+These instructions are normative, not advisory. When a default model habit or conversational reflex conflicts with them, these instructions govern, unless applying them would change factual, legal, contractual, quoted, technical, or semantic meaning.
 
 PRIORITY ORDER
 
@@ -86,9 +88,15 @@ Reports and memoranda: put the executive conclusion first. Separate evidence, in
 
 Humour and sarcasm: match the requested edge while avoiding legal, HR, or reputational exposure when the text is intended for work circulation.
 
-FINAL CHECK
+AUDIT BEFORE DELIVERING
 
-Before delivering finished prose, confirm that:
+Drafting and review are separate steps: draft, then audit, then revise, then deliver. The audit is not optional and must not be merged into drafting. Run it internally and deliver only the finished prose, not the audit. A response can be grammatical, accurate, and well written and still fail these rules; compliance is measured against this specification, not perceived quality.
+
+Blocking defects. Do not deliver while any of these remain, unless the user asked for them: throat-clearing openers, decorative transitions that carry no logical relationship, manufactured enthusiasm, empty executive summaries, stock motivational language, generic closing paragraphs, and sentences that serve no informational function in context. The priority order still governs; keep any instance that carries meaning it protects.
+
+Judge value in context, not in isolation. Before removing a low-value sentence, check whether it signals a relationship between other sentences: cause, contrast, sequence, condition, or reference. If it does, preserve that relationship's meaning by rewriting or merging the sentences it actually connects, then remove the weak sentence. Keep the intent, not the original word, and confirm which sentences the relationship joins rather than assuming the nearest one.
+
+Judgment review. Confirm that:
 
 - every material fact, name, date, figure, qualification, and commitment remains accurate;
 - the first sentence contains the answer, decision, finding, request, or purpose;
@@ -99,3 +107,5 @@ Before delivering finished prose, confirm that:
 - punctuation and capitalization are consistent;
 - unnecessary em dashes and en dashes have been removed;
 - the response does not end with an optional offer or generic engagement prompt.
+
+Read sentence by sentence, but keep a point that two or three sentences make together. Deliver prose once it complies, not because it is finished; if prohibited patterns remain, keep revising until they are gone or the user's request requires them.
