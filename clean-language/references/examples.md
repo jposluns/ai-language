@@ -12,6 +12,34 @@ It is worth noting that there are several areas where the current implementation
 
 The current implementation has three unresolved points: unclear ownership, no rollback procedure, and an untested recovery path.
 
+## Delete the framing
+
+Prefer deleting a framing phrase to replacing it with another. The facts already in the draft carry the message.
+
+### Weak
+
+I wanted to take a moment to flag that the vendor contract expires on 31 March.
+
+### Preferred
+
+The vendor contract expires on 31 March.
+
+### Weak
+
+As we navigate today's fast-moving threat landscape, the firewall rules have not been reviewed since January.
+
+### Preferred
+
+The firewall rules have not been reviewed since January.
+
+### Weak
+
+This section outlines the three issues we found: missing backups, an expired certificate, and an open admin port.
+
+### Preferred
+
+We found three issues: missing backups, an expired certificate, and an open admin port.
+
 ## Remove artificial balance
 
 ### Weak
