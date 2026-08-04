@@ -6,7 +6,7 @@ These instructions cover ChatGPT, Claude, Gemini, and other AI systems. The publ
 
 The preferred Claude method installs the complete Skill package.
 
-1. Download [`clean-language.zip`](https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip).
+1. Download [`clean-language.zip`](https://github.com/jposluns/cleanlanguage/releases/latest/download/clean-language.zip).
 2. Do not unzip the file.
 3. Open Claude in a desktop browser and sign in.
 4. Open **Settings**, then **Capabilities**.
@@ -25,7 +25,7 @@ Apply Clean Language to this draft: [paste your text]
 
 Team and Enterprise administrators may need to enable Skills and code execution. An organization owner can upload the Skill once for everyone.
 
-The matching checksum is available as [`clean-language.zip.sha256`](https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip.sha256).
+The matching checksum is available as [`clean-language.zip.sha256`](https://github.com/jposluns/cleanlanguage/releases/latest/download/clean-language.zip.sha256).
 
 ### Claude Project fallback
 
@@ -45,7 +45,7 @@ Use the Clean Language instructions in project knowledge for every response unle
 
 ChatGPT can use the same packaged Skill as Claude. Upload it once, and ChatGPT applies Clean Language when your request matches.
 
-1. Download [`clean-language.zip`](https://github.com/jposluns/ai-language/releases/latest/download/clean-language.zip). Do not unzip it.
+1. Download [`clean-language.zip`](https://github.com/jposluns/cleanlanguage/releases/latest/download/clean-language.zip). Do not unzip it.
 2. Open ChatGPT.
 3. In the left menu, click **Plugins**, then open **Skills**.
 4. Click **Create**, then **Upload from your computer**.
@@ -123,13 +123,13 @@ Use the Clean Language instructions for every response unless I explicitly tell 
 
 ```bash
 mkdir -p .claude/skills
-cp -R /path/to/ai-language/clean-language .claude/skills/clean-language
+cp -R /path/to/cleanlanguage/clean-language .claude/skills/clean-language
 ```
 
 ### Gemini CLI
 
 ```bash
-gemini skills install https://github.com/jposluns/ai-language.git \
+gemini skills install https://github.com/jposluns/cleanlanguage.git \
   --path clean-language
 ```
 

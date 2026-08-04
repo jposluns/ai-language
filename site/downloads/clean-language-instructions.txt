@@ -3,7 +3,7 @@ CLEAN LANGUAGE INSTRUCTIONS
 Version: 1.0.8
 Author: Jeff Posluns
 Web site: https://cleanlanguage.ai/
-Github: https://github.com/jposluns/ai-language
+Github: https://github.com/jposluns/cleanlanguage
 License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 
 Use these instructions whenever you draft, rewrite, proofread, adapt, or review prose.
